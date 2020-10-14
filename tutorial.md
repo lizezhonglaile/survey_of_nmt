@@ -8,7 +8,7 @@
     * [基于实例的机器翻译](#ebmt)
     * [基于统计的机器翻译](#statistical_machine_translation)
     * [基于神经网络的机器翻译](#neural_machine_translation)
-* [神经机器翻译](#neural_machine_translation)
+* [神经机器翻译基础](#neural_machine_translation)
     * [第一个seq2seq模型](#seq2seq)
     * [注意力模型](#atention)
     * [transformer模型](#transformer)
@@ -20,7 +20,7 @@
     * [非平行语料利用](#beyond_parallel)
     * [解码](#decoding_nmt)
     * [诗歌翻译](#poem_nmt)
-* [挑战和进展](#challenges)
+* [神经机器翻译前沿:挑战和进展](#challenges)
     * [稀疏词问题](#oov)
     * [漏翻译和过翻译](#less_over_translation)
     * [低资源问题](#low_resource)
@@ -57,7 +57,7 @@
 
 <h3 id="smt_tutorials">基于神经网络的机器翻译</h3>
 
-<h2 id="neural_machine_translation">神经机器翻译</h2>
+<h2 id="neural_machine_translation">神经机器翻译基础</h2>
 
 <h3 id="seq2seq">第一个seq2seq模型</h3>
 
@@ -81,7 +81,7 @@
 
 <h3 id="poem_nmt">诗歌翻译</h3>
 
-<h2 id="challenges">挑战和进展</h2>
+<h2 id="challenges">神经机器翻译前沿:挑战和进展</h2>
 
 <h3 id="oov">稀疏词问题</h3>
 
