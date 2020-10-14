@@ -69,11 +69,11 @@
 <h2 id="neural_machine_translation">神经机器翻译基础</h2>
 
 <h3 id="seq2seq">第一个seq2seq模型</h3>
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png" width="75%" height="75%"></div>
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png" width="55%" height="55%"></div>
 <div align="center">seq2seq模型</div>
 
 <h3 id="atention">注意力模型</h3>
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/attention.png" width="75%" height="75%"></div>
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/attention.png" width="55%" height="55%"></div>
 <div align="center">注意力模型</div>
 
 <h3 id="transformer">transformer模型</h3>
@@ -87,9 +87,9 @@
 
 <h3 id="multilingual_nmt">多语言</h3>
 
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/many-to-one.png" width="75%" height="75%"></div>
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/multilingual-baidu.png" width="75%" height="75%"></div>
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/many-to-many.png" width="75%" height="75%"></div>
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/many-to-one.png" width="65%" height="65%"></div>
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/multilingual-baidu.png" width="65%" height="65%"></div>
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/many-to-many.png" width="55%" height="55%"></div>
 
 <h3 id="multimodal_nmt">多模态</h3>
 
@@ -121,7 +121,7 @@
 
 <h3 id="understanding">模型可解释性</h3>
 
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/black-box.jpg" width="75%" height="75%"></div>
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/black-box.jpg" width="65%" height="65%"></div>
 <div align="center">transformer模型</div>
 
 <h3 id="poem_nmt">诗歌翻译</h3>
