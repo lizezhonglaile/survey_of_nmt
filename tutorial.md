@@ -8,25 +8,14 @@ This is a machine translation reading list maintained by the Tsinghua Natural La
     * [基于神经网络的机器翻译](#neural_machine_translation)
  * [效果评估](#evaluation)
  * [基于神经网络的机器翻译](#neural_machine_translation)
-    * [Tutorials](#nmt_tutorials) 
     * [Model Architecture](#model_architecture)
     * [Attention Mechanism](#attention_mechanism)
-    * [Open Vocabulary](#open_vocabulary)
-    * [Training Objectives and Frameworks](#training)
     * [Decoding](#decoding)
     * [Low-resource Language Translation](#low_resource_language_translation)
         * [Semi-supervised Learning](#semi_supervised)
         * [Unsupervised Learning](#unsupervised)
         * [Pivot-based Methods](#pivot_based)
-        * [Data Augmentation](#data_augmentation)
-        * [Data Selection](#data_selection)
-        * [Transfer Learning](#transfer_learning)
-        * [Meta Learning](#meta_learning)
-    * [Multilingual Machine Translation](#multi-task_learning)
-    * [Prior Knowledge Integration](#prior_knowledge_integration)
-        * [Word/Phrase Constraints](#word_phrase_constraints)
-        * [Syntactic/Semantic Constraints](#syntactic_semantic_constraints)
-        * [Coverage Constraints](#coverage_constraints)
+ * [参考文献](#neural_machine_translation)
 
 <h2 id="statistical_machine_translation">Statistical Machine Translation</h2>
 
@@ -58,5 +47,8 @@ This is a machine translation reading list maintained by the Tsinghua Natural La
 <h3 id="nmt_tutorials">Tutorials</h3>
 
 * Thang Luong, Kyunghyun Cho, and Christopher Manning. 2016. [Neural Machine Translation](https://nlp.stanford.edu/projects/nmt/Luong-Cho-Manning-NMT-ACL2016-v4.pdf). *ACL 2016 Tutorial*.  
+
+<h2 id="neural_machine_translation">参考文献</h2>
+
 * Graham Neubig. 2017. [Neural Machine Translation and Sequence-to-sequence Models: A Tutorial](https://arxiv.org/pdf/1703.01619.pdf). *arXiv:1703.01619*. ([Citation](https://scholar.google.com/scholar?cites=17621873290135947085&as_sdt=2005&sciodt=0,5&hl=en): 45)
 * Oriol Vinyals and Navdeep Jaitly. 2017. [Seq2Seq ICML Tutorial](https://docs.google.com/presentation/d/1quIMxEEPEf5EkRHc2USQaoJRC4QNX6_KomdZTBMBWjk/present?slide=id.p). *ICML 2017 Tutorial*.
