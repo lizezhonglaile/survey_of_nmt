@@ -1,11 +1,7 @@
-# Machine Translation Reading List
+# 机器翻译技术调研
 This is a machine translation reading list maintained by the Tsinghua Natural Language Processing Group. 
 
-The past three decades have witnessed the rapid development of machine translation, especially for data-driven approaches such as statistical machine translation (SMT) and neural machine translation (NMT). Due to the dominance of NMT at the present time, priority is given to collecting important, up-to-date NMT papers; the [Edinburgh/JHU MT research survey wiki](http://www.statmt.org/survey/) has good coverage of older papers and a brief description for each sub-topic of MT. Our list is still incomplete and the categorization might be inappropriate. We will keep adding papers and improving the list. Any suggestions are welcome!
-
-
-* [10 Must Reads](#10_must_reads)
-* [Statistical Machine Translation](#statistical_machine_translation)
+* [统计机器翻译](#statistical_machine_translation)
     * [Tutorials](#smt_tutorials)
     * [Word-based Models](#word_based_models)
     * [Phrase-based Models](#phrase_based_models)
