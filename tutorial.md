@@ -1,14 +1,12 @@
 # 机器翻译技术调研
 This is a machine translation reading list maintained by the Tsinghua Natural Language Processing Group. 
-
-* [基于规则的机器翻译](#rule_machine_translation)
-* [基于样例的机器翻译](#rule_machine_translation)
-* [基于统计的机器翻译](#statistical_machine_translation)
-    * [Tutorials](#smt_tutorials)
-    * [Word-based Models](#word_based_models)
-    * [Phrase-based Models](#phrase_based_models)
-    * [Syntax-based Models](#syntax_based_models)
- * [Evaluation](#evaluation)
+* [历史回顾](#history)
+* [主要技术范式](#rule_machine_translation)
+    * [基于规则的机器翻译](#rmt)
+    * [基于实例的机器翻译](#ebmt)
+    * [基于统计的机器翻译](#statistical_machine_translation)
+    * [基于神经网络的机器翻译](#neural_machine_translation)
+ * [效果评估](#evaluation)
  * [基于神经网络的机器翻译](#neural_machine_translation)
     * [Tutorials](#nmt_tutorials) 
     * [Model Architecture](#model_architecture)
