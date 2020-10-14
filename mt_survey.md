@@ -9,7 +9,7 @@
     * [基于统计的机器翻译](#statistical_machine_translation)
     * [基于神经网络的机器翻译](#neural_machine_translation)
 * [神经机器翻译基础](#neural_machine_translation)
-    * [第一个seq2seq模型](#seq2seq)
+    * [seq2seq模型](#seq2seq)
     * [注意力模型](#atention)
     * [transformer模型](#transformer)
     * [短语神经模型](#phrase_nmt)
@@ -27,10 +27,10 @@
     * [跨领域跨语言和跨模态的迁移学习](#transfer)
     * [模型可解释性](#understanding)
     * [诗歌翻译](#poem_nmt)
-* [效果评估](#evaluation)
+* [效果评测](#evaluation)
     * [人工评测](#human_eval)
     * [自动评测](#auto_eval)
-    * [公开评测](#public_eval)
+    * [公开数据集和评测](#public_eval)
 * [参考文献](#refence)
 
 <h2 id="history">背景介绍</h2>
@@ -68,7 +68,7 @@
 
 <h2 id="neural_machine_translation">神经机器翻译基础</h2>
 
-<h3 id="seq2seq">第一个seq2seq模型</h3>
+<h3 id="seq2seq">seq2seq模型</h3>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png" width="55%" height="55%"></div>
 <div align="center">seq2seq模型</div>
 
@@ -132,13 +132,13 @@
 
 <h3 id="poem_nmt">诗歌翻译</h3>
 
-<h2 id="evaluation">效果评估</h2>
+<h2 id="evaluation">效果评测</h2>
 
 <h3 id="human_eval">人工评测</h3>
 
 <h3 id="auto_eval">自动评测</h3>
 
-<h3 id="public_eval">公开评测</h3>
+<h3 id="public_eval">公开数据集和评测</h3>
 
 <h2 id="refence">参考文献</h2>
 
