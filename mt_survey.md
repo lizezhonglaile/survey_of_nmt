@@ -19,7 +19,6 @@
     * [预训练模型](#pretraining)
     * [非平行语料利用](#beyond_parallel)
     * [解码](#decoding_nmt)
-    * [诗歌翻译](#poem_nmt)
 * [神经机器翻译前沿: 挑战和进展](#challenges)
     * [稀疏词问题](#oov)
     * [漏翻译和过翻译](#less_over_translation)
@@ -27,6 +26,7 @@
     * [知识融合](#knowleding_merge)
     * [跨领域跨语言和跨模态的迁移学习](#transfer)
     * [模型可解释性](#understanding)
+    * [诗歌翻译](#poem_nmt)
 * [效果评估](#evaluation)
     * [人工评测](#human_eval)
     * [自动评测](#auto_eval)
@@ -87,7 +87,13 @@
 
 <h3 id="decoding_nmt">解码</h3>
 
-<h3 id="poem_nmt">诗歌翻译</h3>
+<h4>beam search 算法</h4>
+
+<h4>双向解码</h4>
+
+<h4>层次解码</h4>
+
+<h4>曝光偏置问题</h4>
 
 <h2 id="challenges">神经机器翻译前沿: 挑战和进展</h2>
 
@@ -106,7 +112,7 @@
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/black-box.jpg" width="75%" height="75%"></div>
 <div align="center">transformer模型</div>
 
-<h3 id="smt_tutorials">多模态</h3>
+<h3 id="poem_nmt">诗歌翻译</h3>
 
 <h2 id="evaluation">效果评估</h2>
 
