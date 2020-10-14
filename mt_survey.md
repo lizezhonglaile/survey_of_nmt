@@ -58,15 +58,23 @@
     
 统计机器翻译的真正崛起，始于Franz Och在2003年的两篇文章Statistical phrase-based translation和Minimum error rate training in statistical machine translation。这篇文章提出了基于短语的翻译模型和最小错误率训练方法。此后直到2015，2016年，这两种方法都是机器翻译的主流方法。2004年，Franz Och加入谷歌，并领导了谷歌翻译的开发。2006年，谷歌翻译作为一个免费服务正式发布，并带来了统计机器翻译研究的一大波热潮。截止2015年，谷歌翻译已经支持了超过100种语言。这个时代的机器翻译质量较以往的方法有了极大的提高，但是仍然有翻译不准确不流畅的问题。随着数据量的增加，系统性能的提高逐渐变得困难。在2012年之后，统计机器翻译逐渐进入了平台期。2013年，在Seattle举行的EMNLP邀请了Brown进行演讲(Brown早已离开机器翻译领域，在金融界取得巨大成功）——当一项技术开始回忆的时候，它就真的老了。2014年，Franz Och离开了谷歌。与此同时，深度学习技术开始兴起，并带来了神经网络机器翻译技术的诞生。
 
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/phrase_smt.png" width="75%" height="75%"></div>
+
 <h3 id="smt_tutorials">基于神经网络的机器翻译</h3>
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/deeplearning.png" width="75%" height="75%"></div>
+<div align="center">深度学习提供新思路</div>
+
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/smt_vs_nmt.png" width="75%" height="75%"></div>
 
 <h2 id="neural_machine_translation">神经机器翻译基础</h2>
 
 <h3 id="seq2seq">第一个seq2seq模型</h3>
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq2.jpg" width="75%" height="75%"></div>
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png" width="75%" height="75%"></div>
 <div align="center">seq2seq模型</div>
 
 <h3 id="atention">注意力模型</h3>
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/attention.png" width="75%" height="75%"></div>
+<div align="center">注意力模型</div>
 
 <h3 id="transformer">transformer模型</h3>
 
