@@ -35,6 +35,7 @@
 
 <h2 id="history">背景介绍</h2>
 “机器翻译”是一个相对模糊的概念，大体上所有利用机器帮助人类进行翻译活动的技术和服务都可以归类为机器翻译。例如在线词典、翻译套件等，在广义上也可以称为机器翻译。现在绝大多数情况下，机器翻译指的是利用机器（电脑）进行完整的句子或篇章翻译的系统。在线词典等在这种定义下都被排除在外。大体上，机器翻译的发展可以分为一下几个阶段：早期探索时期(1933-1956)；第一次热潮时期(1956-1966)；商用的基于规则时期(1967-2007)；统计机器学习时期(1993-2016)；神经网络机器翻译时期，2013至今。
+
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/mt_history.jpg" width="75%" height="75%"></div>
 <div align="center">机器翻译发展史</div>
 
@@ -62,13 +63,14 @@
 <h2 id="neural_machine_translation">神经机器翻译基础</h2>
 
 <h3 id="seq2seq">第一个seq2seq模型</h3>
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png" width="75%" height="75%"></div>
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq2.jpg" width="75%" height="75%"></div>
 <div align="center">seq2seq模型</div>
 
 <h3 id="atention">注意力模型</h3>
 
 <h3 id="transformer">transformer模型</h3>
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/transformer.png" width="75%" height="75%"></div>
+
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/transformer.jpg" width="75%" height="75%"></div>
 <div align="center">transformer模型</div>
 
 <h3 id="phrase_nmt">短语神经模型</h3>
@@ -100,7 +102,8 @@
 <h3 id="transfer">跨领域跨语言和跨模态的迁移学习</h3>
 
 <h3 id="understanding">模型可解释性</h3>
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/black-box.png" width="75%" height="75%"></div>
+
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/black-box.jpg" width="75%" height="75%"></div>
 <div align="center">transformer模型</div>
 
 <h3 id="smt_tutorials">多模态</h3>
