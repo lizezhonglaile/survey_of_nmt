@@ -87,9 +87,12 @@
 
 <h3 id="multilingual_nmt">多语言</h3>
 
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/many-to-one.png" width="65%" height="65%"></div>
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/multilingual-baidu.png" width="65%" height="65%"></div>
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/many-to-one.png" width="55%" height="55%"></div>
+<div align="center">(a) 多对一</div>
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/multilingual-baidu.png" width="55%" height="55%"></div>
+<div align="center">(a) 一对多</div>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/many-to-many.png" width="55%" height="55%"></div>
+<div align="center">(a) 多对多</div>
 
 <h3 id="multimodal_nmt">多模态</h3>
 
@@ -121,7 +124,7 @@
 
 <h3 id="understanding">模型可解释性</h3>
 
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/black-box.jpg" width="65%" height="65%"></div>
+<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/black-box.jpg" width="55%" height="55%"></div>
 <div align="center">transformer模型</div>
 
 <h3 id="poem_nmt">诗歌翻译</h3>
