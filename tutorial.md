@@ -20,7 +20,7 @@
     * [非平行语料利用](#beyond_parallel)
     * [解码](#decoding_nmt)
     * [诗歌翻译](#poem_nmt)
-* [神经机器翻译前沿:挑战和进展](#challenges)
+* [神经机器翻译前沿: 挑战和进展](#challenges)
     * [稀疏词问题](#oov)
     * [漏翻译和过翻译](#less_over_translation)
     * [低资源问题](#low_resource)
@@ -81,7 +81,7 @@
 
 <h3 id="poem_nmt">诗歌翻译</h3>
 
-<h2 id="challenges">神经机器翻译前沿:挑战和进展</h2>
+<h2 id="challenges">神经机器翻译前沿: 挑战和进展</h2>
 
 <h3 id="oov">稀疏词问题</h3>
 
