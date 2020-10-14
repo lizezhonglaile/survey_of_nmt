@@ -16,6 +16,7 @@
     * [融合句法的神经模型](#syntax_num)
     * [多语言](#multilingual_nmt)
     * [多模态](#multimodal_nmt)
+    * [预训练模型](#pretraining)
     * [非平行语料利用](#beyond_parallel)
     * [解码](#decoding_nmt)
     * [诗歌翻译](#poem_nmt)
@@ -72,7 +73,9 @@
 
 <h3 id="multimodal_nmt">多模态</h3>
 
-<h3 id="beyond_parallel">非平行语料利用</h3>
+<h3 id="pretraining">非平行语料利用</h3>
+
+<h3 id="beyond_parallel">预训练模型</h3>
 
 <h3 id="decoding_nmt">解码</h3>
 
