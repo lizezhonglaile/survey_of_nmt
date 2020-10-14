@@ -61,6 +61,8 @@
 
 <h3 id="seq2seq">第一个seq2seq模型</h3>
 
+![seq2seq模型](https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png)
+
 <h3 id="atention">注意力模型</h3>
 
 <h3 id="transformer">transformer模型</h3>
