@@ -20,9 +20,9 @@
     * [非平行语料利用](#beyond_parallel)
     * [解码](#decoding_nmt)
 * [神经机器翻译前沿: 挑战和进展](#challenges)
-    * [稀疏词问题](#oov)
-    * [漏翻译和过翻译](#less_over_translation)
-    * [低资源问题](#low_resource)
+    * [稀疏词](#oov)
+    * [忠实度](#less_over_translation)
+    * [低资源](#low_resource)
     * [知识融合](#knowleding_merge)
     * [跨领域跨语言和跨模态的迁移学习](#transfer)
     * [模型可解释性](#understanding)
@@ -116,9 +116,10 @@
 
 <h3 id="oov">稀疏词问题</h3>
 
-<h3 id="less_over_translation">漏翻译和过翻译</h3>
+<h3 id="less_over_translation">忠实度</h3>
+忠实度，即“信达雅”中的信，是翻译最起码的要求。不忠实主要表现为漏翻译和过翻译
 
-<h3 id="low_resource">低资源问题</h3>
+<h3 id="low_resource">低资源</h3>
 
 <h3 id="knowleding_merge">知识融合</h3>
 
