@@ -12,7 +12,7 @@
     * [seq2seq模型](#seq2seq)
     * [注意力模型](#atention)
     * [transformer模型](#transformer)
-    * [字符级神经机器翻译(#char_nmt)
+    * [字符级神经机器翻译](#char_nmt)
     * [短语神经模型](#phrase_nmt)
     * [融合句法的神经模型](#syntax_nmt)
     * [多语言](#multilingual_nmt)
