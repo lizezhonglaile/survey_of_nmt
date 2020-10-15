@@ -20,6 +20,11 @@
     * [预训练模型](#pretraining)
     * [单语语料利用](#beyond_parallel)
     * [解码](#decoding_nmt)
+        * [单向解码](#decoding_mono)
+        * [双向解码](#decoding_bi)
+        * [层次解码](#decoding_heir)
+        * [非自回归解码](#decoding_nonauto)
+        * [曝光偏置问题](#decoding_exposuer)
 * [神经机器翻译前沿: 挑战和进展](#challenges)
     * [稀疏词](#oov)
     * [忠实度](#less_over_translation)
@@ -143,13 +148,15 @@
 
 <h3 id="decoding_nmt">解码</h3>
 
-<h4>beam search 算法</h4>
+<h4 id="decoding_mono">单向解码</h4>
 
-<h4>双向解码</h4>
+<h4 id="decoding_bi">双向解码</h4>
 
-<h4>层次解码</h4>
+<h4 id="decoding_heir">层次解码</h4>
 
-<h4>曝光偏置问题</h4>
+<h4 id="decoding_nonauto">非自回归解码</h4>
+
+<h4 id="decoding_exposuer">曝光偏置问题</h4>
 
 <h2 id="challenges">神经机器翻译前沿: 挑战和进展</h2>
 
