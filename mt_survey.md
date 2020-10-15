@@ -12,7 +12,7 @@
     * [seq2seq模型](#seq2seq)
     * [注意力模型](#atention)
     * [transformer模型](#transformer)
-    * [字符级神经机器翻译](#char_nmt)
+    * [字符级神经模型](#char_nmt)
     * [短语神经模型](#phrase_nmt)
     * [融合句法的神经模型](#syntax_nmt)
     * [多语言](#multilingual_nmt)
@@ -65,7 +65,7 @@
 
 <h3 id="statistical_machine_translation">基于统计的机器翻译</h3>
 
-1993年，IBM的 Brown et al. 发表了The mathematics of statistical machine translation: Parameter estimation。这篇文章奠定了此后20年机器翻译的基础。这篇文章将机器翻译描述为一个信道模型（事实
+1993年，IBM的 Brown et al. 发表了The mathematics of statistical machine translation: Parameter estimation。这篇文章奠定了此后20年机器翻译的基础。这篇文章将机器翻译描述为一个信道模型
 
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/phrase_smt.png" width="55%" height="55%"></div>
 
@@ -92,7 +92,7 @@
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/transformer.jpg" width="75%" height="75%"></div>
 <div align="center">transformer模型</div>
 
-<h3 id="char_nmt">字符级神经机器翻译</h3>
+<h3 id="char_nmt">字符级神经模型</h3>
 字符级神经机器翻译（Character Level NMT）是为了解决未登录词、词语切分、词语形态变化等问题提出的一种神经机器翻译模型，主要特点是减小了输入和输出粒度。
 
 <h4> 词语编码方案</h3>
@@ -102,6 +102,8 @@
 （1）字符编码方案。对于英语、法语等拼音文字来说字符是组成词语的基本单位，在语言处理中能够以字符为单位建模。这方面工作很早就开始研究，比如字符级神经网络语言模型[48]。该方案同时也存在不足，比如编码粒度过小，适合英语、法语等字符数量相近的语言之间的翻译，如果用在英语到汉语翻译上会出现诸多问题。
 
 （2）亚词编码方案。亚词编码方案选用的翻译基本单位介于字符和词语，可以得到两种方案的共同优势。词素的粒度同样介于字符和词语之间，不足之处是跟特定语言相关，限制了应用的通用性。因此，亚词通常采用 BPE 编码（Byte Pair Encoding, BPE）得到[49]，该方案将经常结合的字符组合看作是一个单位，比如词语 “ dreamworks interactive”，可以切分成“dre + am + wo + rks/ in + te + ra + cti + ve”序列，方法简单有效，适应性强。
+
+<h4>基于字符的翻译模型</h3>
 
 <h3 id="phrase_nmt">短语神经模型</h3>
 
