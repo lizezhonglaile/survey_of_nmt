@@ -1,5 +1,5 @@
 # 机器翻译技术调研
-* [背景介绍](#history)
+* [前言](#history)
 * [主要技术范式](#methods_machine_translation)
     * [直接机器翻译](#direct_mt)
     * [句法转换机器翻译](#syntax_tranduct_mt)
@@ -7,6 +7,9 @@
     * [基于规则的机器翻译](#rmt)
     * [基于实例的机器翻译](#ebmt)
     * [基于统计的机器翻译](#statistical_machine_translation)
+        * [词统计机器翻译](#word_smt)
+        * [短语统计机器翻译](#phrase_smt)
+        * [层次短语统计机器翻译](#heir_smt)
     * [基于神经网络的机器翻译](#neural_machine_translation)
 * [神经机器翻译基础](#neural_machine_translation)
     * [seq2seq模型](#seq2seq)
@@ -39,7 +42,7 @@
     * [自动评测](#auto_eval)
 * [参考文献](#refence)
 
-<h2 id="history">背景介绍</h2>
+<h2 id="history">前言</h2>
 　　“机器翻译”是指利用计算机实现自然语言的自动翻译的技术。更广义的翻译包含了多模态机器翻译，即输入出了包括文本信息，还可能包括语音，图像，视频等多模态信息。大体上，机器翻译的发展可以分为一下几个阶段：早期探索时期(1933-1956)；第一次热潮时期(1956-1966)；商用的基于规则时期(1967-2007)；统计机器学习时期(1993-2016)；神经网络机器翻译时期，2013至今。
   
 　　早在1949 年,Weaver 发表的以《翻译》为题的备忘录中就提出:“当我阅读一篇用俄语写的文章的时候,我可以说,这篇文章实际上是用英语写的,只不过它是用另外一种奇怪的符号编了码而已,当我在阅读时,我是在进行解码。”这实际上就是基于信源信道思想的统计机器翻译方法的萌芽。
@@ -68,6 +71,12 @@
 1993年，IBM的 Brown et al. 发表了The mathematics of statistical machine translation: Parameter estimation。这篇文章奠定了此后20年机器翻译的基础。这篇文章将机器翻译描述为一个信道模型
 
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/phrase_smt.png" width="55%" height="55%"></div>
+
+<h4 id="word_smt">词统计机器翻译</h4>
+
+<h4 id="phrase_smt">短语统计机器翻译</h4>
+
+<h4 id="heir_smt">层次短语统计机器翻译</h4>
 
 <h3 id="smt_tutorials">基于神经网络的机器翻译</h3>
 与统计机器翻译的离散表示方法不同，神经机器翻译采用连续空间表示方法（Continuous  Space Representation）表示词语、短语和句子。在翻译建模上，不需要词对齐、翻译规则抽取等统计机器翻译的必要步骤，完全采用神经网络完成从源语言到目标语言的映射。
