@@ -12,7 +12,7 @@
     * [seq2seq模型](#seq2seq)
     * [注意力模型](#atention)
     * [transformer模型](#transformer)
-    * [字符级神经模型](#char_nmt)
+    * [细粒度神经模型](#char_nmt)
     * [短语神经模型](#phrase_nmt)
     * [融合句法的神经模型](#syntax_nmt)
     * [多语言](#multilingual_nmt)
@@ -23,20 +23,20 @@
         * [单向解码](#decoding_mono)
         * [双向解码](#decoding_bi)
         * [层次解码](#decoding_heir)
-        * [非自回归解码](#decoding_nonauto)
+        * [并行解码](#decoding_parallel)
         * [曝光偏置问题](#decoding_exposuer)
 * [神经机器翻译前沿: 挑战和进展](#challenges)
     * [稀疏词](#oov)
     * [忠实度](#less_over_translation)
     * [低资源](#low_resource)
-    * [知识融合](#knowleding_merge)
-    * [跨领域跨语言和跨模态的迁移学习](#transfer)
+    * [语言学知识融合](#knowledge_merge)
+    * [知识迁移](#knowledge_transfer)
     * [模型可解释性](#understanding)
     * [诗歌翻译](#poem_nmt)
 * [效果评测](#evaluation)
+    * [公开数据集和评测](#public_eval)
     * [人工评测](#human_eval)
     * [自动评测](#auto_eval)
-    * [公开数据集和评测](#public_eval)
 * [参考文献](#refence)
 
 <h2 id="history">背景介绍</h2>
@@ -92,7 +92,7 @@
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/transformer.jpg" width="75%" height="75%"></div>
 <div align="center">transformer模型</div>
 
-<h3 id="char_nmt">字符级神经模型</h3>
+<h3 id="char_nmt">细粒度神经模型</h3>
 字符级神经机器翻译（Character Level NMT）是为了解决未登录词、词语切分、词语形态变化等问题提出的一种神经机器翻译模型，主要特点是减小了输入和输出粒度。
 
 <h4> 词语编码方案</h3>
@@ -156,7 +156,7 @@
 
 <h4 id="decoding_heir">层次解码</h4>
 
-<h4 id="decoding_nonauto">非自回归解码</h4>
+<h4 id="decoding_parallel">并行解码</h4>
 
 <h4 id="decoding_exposuer">曝光偏置问题</h4>
 
@@ -181,9 +181,9 @@
 
 <h3 id="low_resource">低资源</h3>
 
-<h3 id="knowleding_merge">知识融合</h3>
+<h3 id="knowledge_merge">语言学知识融合</h3>
 
-<h3 id="transfer">跨领域跨语言和跨模态的迁移学习</h3>
+<h3 id="knowledge_transfer">知识迁移</h3>
 
 <h3 id="understanding">模型可解释性</h3>
 
@@ -194,11 +194,11 @@
 
 <h2 id="evaluation">效果评测</h2>
 
+<h3 id="public_eval">公开数据集和评测</h3>
+
 <h3 id="human_eval">人工评测</h3>
 
 <h3 id="auto_eval">自动评测</h3>
-
-<h3 id="public_eval">公开数据集和评测</h3>
 
 <h2 id="refence">参考文献</h2>
 
