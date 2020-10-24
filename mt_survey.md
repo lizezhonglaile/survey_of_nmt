@@ -7,9 +7,10 @@
     * [基于规则的机器翻译](#rmt)
     * [基于实例的机器翻译](#ebmt)
     * [基于统计的机器翻译](#statistical_machine_translation)
-        * [词统计机器翻译](#word_smt)
-        * [短语统计机器翻译](#phrase_smt)
-        * [层次短语统计机器翻译](#heir_smt)
+        * [词翻译模型](#word_smt)
+        * [短语翻译模型](#phrase_smt)
+        * [层次短语翻译模型](#heir_smt)
+        * [其他统计翻译模型](#other_smt)
     * [基于神经网络的机器翻译](#neural_machine_translation)
 * [(三) 神经机器翻译基础：概念和模型](#neural_machine_translation)
     * [词表示学习](#word_representation)
@@ -21,12 +22,13 @@
     * [seq2seq模型](#seq2seq)
         * [基于RNN的序列模型](#rnn_seq2seq)
         * [基于CNN的序列模型](#cnn_seq2seq)
+        * [其他序列模型](#other_seq2seq)
     * [注意力模型](#attention)
         * [基础注意力模型](#basic_attention)
         * [注意力改进](#improve_attention)
     * [transformer模型](#transformer)
-        * [基础transformer模型](#basic_transformer)
-        * [改进transformer](#improve_transformer)
+        * [transformer基础模型](#basic_transformer)
+        * [transformer变种模型](#improve_transformer)
     * [解码](#decoding_nmt)
         * [单向解码](#decoding_mono)
         * [双向解码](#decoding_bi)
@@ -41,7 +43,7 @@
 * [(四) 神经机器翻译前沿：挑战，现状和未来](#challenges)
     * [稀疏词](#oov)
         * [细粒度神经模型](#char_nmt)
-    * [忠实度](#less_over_translation)
+    * [忠实度](#loyal_translation)
     * [资源稀缺](#low_resource)
         * [数据增强](#data_argument)
         * [单语语料利用](#monolingual_exploit)
@@ -86,12 +88,14 @@
 1993年，IBM的 Brown et al. 发表了The mathematics of statistical machine translation: Parameter estimation。这篇文章奠定了此后20年机器翻译的基础。这篇文章将机器翻译描述为一个信道模型
 
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/phrase_smt.png" width="55%" height="55%"></div>
+        
+<h4 id="word_smt">词翻译模型</h4>
 
-<h4 id="word_smt">词统计机器翻译</h4>
+<h4 id="phrase_smt">短语翻译模型</h4>
 
-<h4 id="phrase_smt">短语统计机器翻译</h4>
+<h4 id="heir_smt">层次短语翻译模型</h4>
 
-<h4 id="heir_smt">层次短语统计机器翻译</h4>
+<h4 id="other_smt">其他统计翻译模型</h4>
 
 <h3 id="smt_tutorials">基于神经网络的机器翻译</h3>
 与统计机器翻译的离散表示方法不同，神经机器翻译采用连续空间表示方法（Continuous  Space Representation）表示词语、短语和句子。在翻译建模上，不需要词对齐、翻译规则抽取等统计机器翻译的必要步骤，完全采用神经网络完成从源语言到目标语言的映射。
@@ -123,13 +127,15 @@
 
 <h4 id="cnn_seq2seq">基于CNN的序列模型</h4>
 
+<h4 id="other_seq2seq">其他序列模型</h4>
+
 <h3 id="attention">注意力模型</h3>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/attention.png" width="55%" height="55%"></div>
 <div align="center">注意力模型</div>
 
-<h4 id="basic_attention">基础注意力模型</h4>
+<h4 id="basic_attention">transformer基础模型</h4>
 
-<h4 id="improve_attention">注意力改进</h4>
+<h4 id="improve_attention">transformer变种模型</h4>
 
 <h3 id="transformer">transformer模型</h3>
 
@@ -208,7 +214,7 @@
 基于字符的翻译模型
 
 
-<h3 id="less_over_translation">忠实度</h3>
+<h3 id="loyal_translation">忠实度</h3>
 忠实度，即“信达雅”中的信，是翻译最起码的要求。不忠实主要表现为漏翻译和过翻译。
 过度翻译指一些词或短语被重复地翻译，翻译不充分指部分词或短语没有被完整地翻译。该问题在神经机器翻译中普遍存在，包括基于注意力的神经机器翻译。
 
