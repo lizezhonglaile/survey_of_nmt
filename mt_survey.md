@@ -12,30 +12,32 @@
         * [层次短语统计机器翻译](#heir_smt)
     * [基于神经网络的机器翻译](#neural_machine_translation)
 * [神经机器翻译基础](#neural_machine_translation)
+    * [词表示学习](#word_representation)
+    * [句子表示学习](#sent_representation)
     * [seq2seq模型](#seq2seq)
     * [注意力模型](#atention)
-    * [transformer模型](#transformer)
-    * [细粒度神经模型](#char_nmt)
-    * [短语神经模型](#phrase_nmt)
-    * [融合句法的神经模型](#syntax_nmt)
-    * [多语言](#multilingual_nmt)
-    * [多模态](#multimodal_nmt)
-    * [预训练模型](#pretraining)
-    * [单语语料利用](#beyond_parallel)
+    * [transformer](#transformer)
     * [解码](#decoding_nmt)
         * [单向解码](#decoding_mono)
         * [双向解码](#decoding_bi)
         * [层次解码](#decoding_heir)
         * [并行解码](#decoding_parallel)
         * [曝光偏置问题](#decoding_exposuer)
+    * [多语言](#multilingual_nmt)
+    * [多模态](#multimodal_nmt)
 * [神经机器翻译前沿: 挑战和进展](#challenges)
     * [稀疏词](#oov)
+        * [细粒度神经模型](#char_nmt)
     * [忠实度](#less_over_translation)
-    * [低资源](#low_resource)
+    * [资源稀缺](#low_resource)
+        * [数据增强](#data_argument)
+        * [单语语料利用](#monolingual_exploit)
+        * [预训练模型](#pretraining)
+        * [领域迁移](#domain_transfer)
+        * [多语言迁移](#multi_lingual_transfer)
     * [语言学知识融合](#knowledge_merge)
-    * [知识迁移](#knowledge_transfer)
     * [模型可解释性](#understanding)
-    * [诗歌翻译](#poem_nmt)
+    * [情感和文学性](#elegent_nmt)
 * [效果评测](#evaluation)
     * [公开数据集和评测](#public_eval)
     * [人工评测](#human_eval)
@@ -88,6 +90,10 @@
 
 <h2 id="neural_machine_translation">神经机器翻译基础</h2>
 
+<h3 id="word_representation">词表示学习</h3>
+
+<h3 id="sent_representation">句子表示学习</h3>
+    
 <h3 id="seq2seq">seq2seq模型</h3>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png" width="55%" height="55%"></div>
 <div align="center">seq2seq模型</div>
@@ -101,22 +107,17 @@
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/transformer.jpg" width="75%" height="75%"></div>
 <div align="center">transformer模型</div>
 
-<h3 id="char_nmt">细粒度神经模型</h3>
-字符级神经机器翻译（Character Level NMT）是为了解决未登录词、词语切分、词语形态变化等问题提出的一种神经机器翻译模型，主要特点是减小了输入和输出粒度。
+<h3 id="decoding_nmt">解码</h3>
 
-<h4> 词语编码方案</h3>
+<h4 id="decoding_mono">单向解码</h4>
 
-多数神经机器翻译模型都以词语作为翻译基本单位，存在未登录词、数据稀疏，以及汉语、日语等语言中的分词问题。此外，在形态变化较多的语言中，如英语、法语等语言，以词为处理基本单位时，丢失了词语之间的形态变化、语义信息。如英语单词，“run”，“runs”，“ran”，“running”被认为是四个不同的词，忽略了他们有着共同的前缀“run”。为了解决上述问题，学者们提出了不同的词语编码方案，根据粒度划分可以归为以下两种：
+<h4 id="decoding_bi">双向解码</h4>
 
-（1）字符编码方案。对于英语、法语等拼音文字来说字符是组成词语的基本单位，在语言处理中能够以字符为单位建模。这方面工作很早就开始研究，比如字符级神经网络语言模型[48]。该方案同时也存在不足，比如编码粒度过小，适合英语、法语等字符数量相近的语言之间的翻译，如果用在英语到汉语翻译上会出现诸多问题。
+<h4 id="decoding_heir">层次解码</h4>
 
-（2）亚词编码方案。亚词编码方案选用的翻译基本单位介于字符和词语，可以得到两种方案的共同优势。词素的粒度同样介于字符和词语之间，不足之处是跟特定语言相关，限制了应用的通用性。因此，亚词通常采用 BPE 编码（Byte Pair Encoding, BPE）得到[49]，该方案将经常结合的字符组合看作是一个单位，比如词语 “ dreamworks interactive”，可以切分成“dre + am + wo + rks/ in + te + ra + cti + ve”序列，方法简单有效，适应性强。
+<h4 id="decoding_parallel">并行解码</h4>
 
-<h4>基于字符的翻译模型</h3>
-
-<h3 id="phrase_nmt">短语神经模型</h3>
-
-<h3 id="syntax_nmt">融合句法的神经模型</h3>
+<h4 id="decoding_exposuer">曝光偏置问题</h4>
 
 <h3 id="multilingual_nmt">多语言</h3>
 多语言机器翻译，区别于通常一种语言到另外一种语言的一对一翻译，能够采用一个模型完成多种语言之间翻译。基于神经网络的多语言机器翻译源于序列到序列学习和多任务学习，从类型上可以分为单语到多语翻译、多语到单语翻译，以及多语到多语翻译。
@@ -157,21 +158,22 @@
 
 <h3 id="beyond_parallel">预训练模型</h3>
 
-<h3 id="decoding_nmt">解码</h3>
-
-<h4 id="decoding_mono">单向解码</h4>
-
-<h4 id="decoding_bi">双向解码</h4>
-
-<h4 id="decoding_heir">层次解码</h4>
-
-<h4 id="decoding_parallel">并行解码</h4>
-
-<h4 id="decoding_exposuer">曝光偏置问题</h4>
-
 <h2 id="challenges">神经机器翻译前沿: 挑战和进展</h2>
 
 <h3 id="oov">稀疏词问题</h3>
+
+<h4 id="char_nmt">细粒度神经模型</h4>
+字符级神经机器翻译（Character Level NMT）是为了解决未登录词、词语切分、词语形态变化等问题提出的一种神经机器翻译模型，主要特点是减小了输入和输出粒度。
+词语编码方案
+
+多数神经机器翻译模型都以词语作为翻译基本单位，存在未登录词、数据稀疏，以及汉语、日语等语言中的分词问题。此外，在形态变化较多的语言中，如英语、法语等语言，以词为处理基本单位时，丢失了词语之间的形态变化、语义信息。如英语单词，“run”，“runs”，“ran”，“running”被认为是四个不同的词，忽略了他们有着共同的前缀“run”。为了解决上述问题，学者们提出了不同的词语编码方案，根据粒度划分可以归为以下两种：
+
+（1）字符编码方案。对于英语、法语等拼音文字来说字符是组成词语的基本单位，在语言处理中能够以字符为单位建模。这方面工作很早就开始研究，比如字符级神经网络语言模型[48]。该方案同时也存在不足，比如编码粒度过小，适合英语、法语等字符数量相近的语言之间的翻译，如果用在英语到汉语翻译上会出现诸多问题。
+
+（2）亚词编码方案。亚词编码方案选用的翻译基本单位介于字符和词语，可以得到两种方案的共同优势。词素的粒度同样介于字符和词语之间，不足之处是跟特定语言相关，限制了应用的通用性。因此，亚词通常采用 BPE 编码（Byte Pair Encoding, BPE）得到[49]，该方案将经常结合的字符组合看作是一个单位，比如词语 “ dreamworks interactive”，可以切分成“dre + am + wo + rks/ in + te + ra + cti + ve”序列，方法简单有效，适应性强。
+
+基于字符的翻译模型
+
 
 <h3 id="less_over_translation">忠实度</h3>
 忠实度，即“信达雅”中的信，是翻译最起码的要求。不忠实主要表现为漏翻译和过翻译。
@@ -188,18 +190,28 @@
 
 有学者通过在神经机器翻译中融合重构（Reconstruction）思想，提高翻译忠实度
 
-<h3 id="low_resource">低资源</h3>
+<h3 id="low_resource">资源稀缺</h3>
+
+[资源稀缺](#low_resource)
+
+<h4 id="data_argument">数据增强</h4>
+
+<h4 id="monolingual_exploit">单语语料利用</h4>
+
+<h4 id="pretraining">预训练模型</h4>
+
+<h4 id="domain_transfer">跨领域迁移</h4>
+
+<h4 id="multi_lingual_transfer">跨语言迁移</h4>
 
 <h3 id="knowledge_merge">语言学知识融合</h3>
-
-<h3 id="knowledge_transfer">知识迁移</h3>
 
 <h3 id="understanding">模型可解释性</h3>
 
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/black-box.jpg" width="55%" height="55%"></div>
-<div align="center">transformer模型</div>
+<div align="center">黑盒模型</div>
 
-<h3 id="poem_nmt">诗歌翻译</h3>
+<h3 id="elegent_nmt">情感和文学性</h3>
 
 <h2 id="evaluation">效果评测</h2>
 
