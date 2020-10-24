@@ -50,7 +50,12 @@
         * [预训练模型](#pretraining)
         * [领域迁移](#domain_transfer)
         * [多语言迁移](#multi_lingual_transfer)
-    * [语言学知识融合](#knowledge_merge)
+    * [语言学知识融合](#linguistic_knowledge_merge)
+    * [外部知识融合](#world_knowledge_merge)
+        * [词语知识融合](#word_knowledge_merge)
+        * [短语知识融合](#phrase_knowledge_merge)
+        * [句子知识融合](#sent_knowledge_merge)
+        * [图谱知识融合](#graph_knowledge_merge)
     * [模型可解释性](#understanding)
     * [情感和文学性](#elegent_nmt)
 * [(五) 效果评测](#evaluation)
@@ -241,7 +246,17 @@
 
 <h4 id="multi_lingual_transfer">跨语言迁移</h4>
 
-<h3 id="knowledge_merge">语言学知识融合</h3>
+<h3 id="linguistic_knowledge_merge">语言学知识融合</h3>
+
+<h3 id="world_knowledge_merge">外部知识融合</h3>
+
+<h4 id="word_knowledge_merge">词语知识融合</h4>
+
+<h4 id="phrase_knowledge_merge">短语知识融合</h4>
+
+<h4 id="sent_knowledge_merge">句子知识融合</h4>
+
+<h4 id="graph_knowledge_merge">图谱知识融合</h4>
 
 <h3 id="understanding">模型可解释性</h3>
 
