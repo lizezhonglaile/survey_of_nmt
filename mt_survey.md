@@ -51,6 +51,8 @@
         * [领域迁移](#domain_transfer)
         * [多语言迁移](#multi_lingual_transfer)
     * [语言学知识融合](#linguistic_knowledge_merge)
+        * [源语言知识融合](#src_linguistic_knowledge_merge)
+        * [目标语言知识融合](#tgt_linguistic_knowledge_merge)
     * [外部知识融合](#world_knowledge_merge)
         * [词语知识融合](#word_knowledge_merge)
         * [短语知识融合](#phrase_knowledge_merge)
@@ -247,6 +249,10 @@
 <h4 id="multi_lingual_transfer">跨语言迁移</h4>
 
 <h3 id="linguistic_knowledge_merge">语言学知识融合</h3>
+
+<h4 id="src_linguistic_knowledge_merge">源语言知识融合</h4>
+
+<h4 id="tgt_linguistic_knowledge_merge">目标语言知识融合</h4>
 
 <h3 id="world_knowledge_merge">外部知识融合</h3>
 
