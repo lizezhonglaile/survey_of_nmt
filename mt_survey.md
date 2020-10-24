@@ -119,6 +119,10 @@
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png" width="55%" height="55%"></div>
 <div align="center">seq2seq模型</div>
 
+<h4 id="rnn_seq2seq">基于RNN的序列模型</h4>
+
+<h4 id="cnn_seq2seq">基于CNN的序列模型</h4>
+
 <h3 id="attention">注意力模型</h3>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/attention.png" width="55%" height="55%"></div>
 <div align="center">注意力模型</div>
