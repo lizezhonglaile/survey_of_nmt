@@ -11,7 +11,7 @@
         * [短语统计机器翻译](#phrase_smt)
         * [层次短语统计机器翻译](#heir_smt)
     * [基于神经网络的机器翻译](#neural_machine_translation)
-* [神经机器翻译基本概念](#neural_machine_translation)
+* [神经机器翻译基础：概念和模型](#neural_machine_translation)
     * [词表示学习](#word_representation)
     * [句子表示学习](#sent_representation)
     * [seq2seq模型](#seq2seq)
@@ -25,7 +25,7 @@
         * [曝光偏置问题](#decoding_exposuer)
     * [多语言](#multilingual_nmt)
     * [多模态](#multimodal_nmt)
-* [神经机器翻译挑战和进展](#challenges)
+* [神经机器翻译前沿：挑战，现状和未来](#challenges)
     * [稀疏词](#oov)
         * [细粒度神经模型](#char_nmt)
     * [忠实度](#less_over_translation)
@@ -88,7 +88,7 @@
 
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/smt_vs_nmt.png" width="50%" height="50%"></div>
 
-<h2 id="neural_machine_translation">神经机器翻译基本概念</h2>
+<h2 id="neural_machine_translation">神经机器翻译基础：概念和模型</h2>
 
 <h3 id="word_representation">词表示学习</h3>
 
@@ -158,7 +158,7 @@
 
 <h3 id="beyond_parallel">预训练模型</h3>
 
-<h2 id="challenges">神经机器翻译挑战和进展</h2>
+<h2 id="challenges">神经机器翻译前沿：挑战，现状和未来</h2>
 
 <h3 id="oov">稀疏词问题</h3>
 
