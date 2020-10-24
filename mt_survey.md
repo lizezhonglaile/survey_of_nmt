@@ -1,6 +1,6 @@
 # 机器翻译技术调研
-* [前言](#history)
-* [主要技术范式](#methods_machine_translation)
+* [(一) 前言](#history)
+* [(二) 主要技术范式](#methods_machine_translation)
     * [直接机器翻译](#direct_mt)
     * [句法转换机器翻译](#syntax_tranduct_mt)
     * [基于中间语言的机器翻译](#interlingua_mt)
@@ -11,7 +11,7 @@
         * [短语统计机器翻译](#phrase_smt)
         * [层次短语统计机器翻译](#heir_smt)
     * [基于神经网络的机器翻译](#neural_machine_translation)
-* [神经机器翻译基础：概念和模型](#neural_machine_translation)
+* [(三) 神经机器翻译基础：概念和模型](#neural_machine_translation)
     * [词表示学习](#word_representation)
     * [句子表示学习](#sent_representation)
     * [seq2seq模型](#seq2seq)
@@ -25,7 +25,7 @@
         * [曝光偏置问题](#decoding_exposuer)
     * [多语言](#multilingual_nmt)
     * [多模态](#multimodal_nmt)
-* [神经机器翻译前沿：挑战，现状和未来](#challenges)
+* [(四) 神经机器翻译前沿：挑战，现状和未来](#challenges)
     * [稀疏词](#oov)
         * [细粒度神经模型](#char_nmt)
     * [忠实度](#less_over_translation)
@@ -38,13 +38,13 @@
     * [语言学知识融合](#knowledge_merge)
     * [模型可解释性](#understanding)
     * [情感和文学性](#elegent_nmt)
-* [效果评测](#evaluation)
+* [(五) 效果评测](#evaluation)
     * [公开数据集和评测](#public_eval)
     * [人工评测](#human_eval)
     * [自动评测](#auto_eval)
-* [参考文献](#refence)
+* [(六) 参考文献](#refence)
 
-<h2 id="history">前言</h2>
+<h2 id="history">(一) 前言</h2>
 　　“机器翻译”是指利用计算机实现自然语言的自动翻译的技术。更广义的翻译包含了多模态机器翻译，即输入出了包括文本信息，还可能包括语音，图像，视频等多模态信息。大体上，机器翻译的发展可以分为一下几个阶段：早期探索时期(1933-1956)；第一次热潮时期(1956-1966)；商用的基于规则时期(1967-2007)；统计机器学习时期(1993-2016)；神经网络机器翻译时期，2013至今。
   
 　　早在1949 年,Weaver 发表的以《翻译》为题的备忘录中就提出:“当我阅读一篇用俄语写的文章的时候,我可以说,这篇文章实际上是用英语写的,只不过它是用另外一种奇怪的符号编了码而已,当我在阅读时,我是在进行解码。”这实际上就是基于信源信道思想的统计机器翻译方法的萌芽。
@@ -56,7 +56,7 @@
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/mt_history.jpg" width="75%" height="75%"></div>
 <div align="center">机器翻译发展史</div>
 
-<h2 id="methods_machine_translation">主要技术范式</h2>
+<h2 id="methods_machine_translation">(二) 主要技术范式</h2>
 
 <h3 id="direct_mt">直接机器翻译</h3>
 
@@ -88,7 +88,7 @@
 
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/smt_vs_nmt.png" width="50%" height="50%"></div>
 
-<h2 id="neural_machine_translation">神经机器翻译基础：概念和模型</h2>
+<h2 id="neural_machine_translation">(三) 神经机器翻译基础：概念和模型</h2>
 
 <h3 id="word_representation">词表示学习</h3>
 
@@ -158,7 +158,7 @@
 
 <h3 id="beyond_parallel">预训练模型</h3>
 
-<h2 id="challenges">神经机器翻译前沿：挑战，现状和未来</h2>
+<h2 id="challenges">(四) 神经机器翻译前沿：挑战，现状和未来</h2>
 
 <h3 id="oov">稀疏词问题</h3>
 
@@ -213,7 +213,7 @@
 
 <h3 id="elegent_nmt">情感和文学性</h3>
 
-<h2 id="evaluation">效果评测</h2>
+<h2 id="evaluation">(五) 效果评测</h2>
 
 <h3 id="public_eval">公开数据集和评测</h3>
 
@@ -221,7 +221,7 @@
 
 <h3 id="auto_eval">自动评测</h3>
 
-<h2 id="refence">参考文献</h2>
+<h2 id="refence">(六) 参考文献</h2>
 
 * Peter E. Brown, Stephen A. Della Pietra, Vincent J. Della Pietra, and Robert L. Mercer. 1993. [The Mathematics of Statistical Machine Translation: Parameter Estimation](http://aclweb.org/anthology/J93-2003). *Computational Linguistics*. ([Citation](https://scholar.google.com/scholar?cites=2259057253133260714&as_sdt=2005&sciodt=0,5&hl=en): 5,218)
 * Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu. 2002. [BLEU: a Method for Automatic Evaluation of Machine Translation](http://aclweb.org/anthology/P02-1040). In *Proceedings of ACL 2002*. ([Citation](https://scholar.google.com/scholar?cites=9019091454858686906&as_sdt=2005&sciodt=0,5&hl=en): 10,700)
