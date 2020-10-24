@@ -36,7 +36,7 @@
     * [多语言](#multilingual_nmt)
         * [多对一](#many_to_one)
         * [一对多](#one_to_many)
-        * [多对对](#many_to_many)
+        * [多对多](#many_to_many)
     * [多模态](#multimodal_nmt)
 * [(四) 神经机器翻译前沿：挑战，现状和未来](#challenges)
     * [稀疏词](#oov)
