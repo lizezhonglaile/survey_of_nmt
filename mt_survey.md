@@ -225,8 +225,6 @@
 
 <h3 id="low_resource">资源稀缺</h3>
 
-[资源稀缺](#low_resource)
-
 <h4 id="data_argument">数据增强</h4>
 
 <h4 id="monolingual_exploit">单语语料利用</h4>
