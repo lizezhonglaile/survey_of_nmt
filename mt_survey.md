@@ -53,7 +53,7 @@
         * [短语知识融合](#phrase_knowledge_merge)
         * [句子知识融合](#sent_knowledge_merge)
         * [图谱知识融合](#graph_knowledge_merge)
-    * [解码搜索空间](#decoding_space)
+    * [解码问题](#decoding_space)
         * [双向解码](#decoding_bi)
         * [层次解码](#decoding_heir)
         * [二次解码](#decoding_mutli_pass)
