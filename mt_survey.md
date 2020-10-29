@@ -30,11 +30,6 @@
         * [transformer基础模型](#basic_transformer)
         * [transformer变种模型](#improve_transformer)
     * [解码](#decoding_nmt)
-        * [单向解码](#decoding_mono)
-        * [双向解码](#decoding_bi)
-        * [层次解码](#decoding_heir)
-        * [并行解码](#decoding_parallel)
-        * [曝光偏置和强化学习](#decoding_exposuer)
     * [多语言](#multilingual_nmt)
         * [多对一](#many_to_one)
         * [一对多](#one_to_many)
@@ -58,6 +53,12 @@
         * [短语知识融合](#phrase_knowledge_merge)
         * [句子知识融合](#sent_knowledge_merge)
         * [图谱知识融合](#graph_knowledge_merge)
+    * [解码搜索空间](#decoding_space)
+        * [双向解码](#decoding_bi)
+        * [层次解码](#decoding_heir)
+        * [二次解码](#decoding_mutli_pass)
+        * [并行解码](#decoding_parallel)
+        * [曝光偏置](#decoding_exposuer)
     * [模型可解释性](#understanding)
     * [情感和文学性](#elegent_nmt)
 * [(五) 效果评测](#evaluation)
@@ -154,16 +155,6 @@
 <h4 id="improve_transformer">改进transformer</h4>
 
 <h3 id="decoding_nmt">解码</h3>
-
-<h4 id="decoding_mono">单向解码</h4>
-
-<h4 id="decoding_bi">双向解码</h4>
-
-<h4 id="decoding_heir">层次解码</h4>
-
-<h4 id="decoding_parallel">并行解码</h4>
-
-<h4 id="decoding_exposuer">曝光偏置和强化学习</h4>
 
 <h3 id="multilingual_nmt">多语言</h3>
 多语言机器翻译，区别于通常一种语言到另外一种语言的一对一翻译，能够采用一个模型完成多种语言之间翻译。基于神经网络的多语言机器翻译源于序列到序列学习和多任务学习，从类型上可以分为单语到多语翻译、多语到单语翻译，以及多语到多语翻译。
@@ -263,6 +254,18 @@
 <h4 id="sent_knowledge_merge">句子知识融合</h4>
 
 <h4 id="graph_knowledge_merge">图谱知识融合</h4>
+
+<h3 id="decoding_space">解码搜索空间</h3>
+
+<h4 id="decoding_bi">双向解码</h4>
+
+<h4 id="decoding_heir">层次解码</h4>
+
+<h4 id="decoding_mutli_pass">二次解码</h4>
+
+<h4 id="decoding_parallel">并行解码</h4>
+
+<h4 id="decoding_exposuer">曝光偏置</h4>
 
 <h3 id="understanding">模型可解释性</h3>
 
