@@ -36,8 +36,7 @@
     * [知识融合](#knowledge_merge)
         * [词汇知识](#word_knowledge_merge)
         * [短语知识](#phrase_knowledge_merge)
-        * [源端句法知识](#src_syntax_merge)
-        * [目标端句法知识](#tgt_syntax_merge)
+        * [句法知识](#syntax_merge)
         * [世界知识](#world_knowledge_merge)
     * [解码问题](#decoding_space)
         * [双向解码](#decoding_bi)
@@ -231,9 +230,9 @@
 外部词典
 短语编码和解码
 
-<h4 id="src_syntax_merge">源端句法知识</h4>
-
-<h4 id="tgt_syntax_merge">目标端句法知识</h4>
+<h4 id="syntax_merge">句法知识</h4>
+源端句法知识
+目标端句法知识
 
 <h4 id="world_knowledge_merge">世界知识</h4>
 
