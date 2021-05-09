@@ -25,7 +25,7 @@
         * [一对多](#one_to_many)
         * [多对多](#many_to_many)
     * [多模态](#multimodal_nmt)
-* [(四) 神经机器翻译前沿：挑战，现状和未来](#challenges)
+* [(四) 神经机器翻译前沿：问题和现状](#challenges)
     * [开放词表](#oov)
         * [细粒度神经模型](#char_nmt)
     * [忠实度](#loyal_translation)
@@ -51,12 +51,13 @@
         * [显式建模](#explict_model)
         * [可视化](#visualize)
     * [情感和文学性](#elegent_nmt)
-* [(五) 效果评测](#evaluation)
+* [(五) 神经机器翻译的未来](#future)
+* [(六) 效果评测](#evaluation)
     * [公开数据集](#corpus)
     * [人工评测](#human_eval)
     * [自动评测](#auto_eval)
-* [(六) 开源工具](#open_tool)
-* [(七) 参考文献](#refence)
+* [(七) 开源工具](#open_tool)
+* [(八) 参考文献](#refence)
 
 <h2 id="history">(一) 前言</h2>
 
@@ -246,7 +247,9 @@
 
 <h3 id="elegent_nmt">情感和文学性</h3>
 
-<h2 id="evaluation">(五) 效果评测</h2>
+<h2 id="future">(五) 神经机器翻译的未来</h2>
+
+<h2 id="evaluation">(六) 效果评测</h2>
 
 <h3 id="corpus">数据集</h3>
 
@@ -254,9 +257,9 @@
 
 <h3 id="auto_eval">自动评测</h3>
 
-<h2 id="open_tool">(六) 开源工具</h2>
+<h2 id="open_tool">(七) 开源工具</h2>
 
-<h2 id="refence">(七) 参考文献</h2>
+<h2 id="refence">(八) 参考文献</h2>
 
 * Peter E. Brown, Stephen A. Della Pietra, Vincent J. Della Pietra, and Robert L. Mercer. 1993. [The Mathematics of Statistical Machine Translation: Parameter Estimation](http://aclweb.org/anthology/J93-2003). *Computational Linguistics*. ([Citation](https://scholar.google.com/scholar?cites=2259057253133260714&as_sdt=2005&sciodt=0,5&hl=en): 5,218)
 * Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu. 2002. [BLEU: a Method for Automatic Evaluation of Machine Translation](http://aclweb.org/anthology/P02-1040). In *Proceedings of ACL 2002*. ([Citation](https://scholar.google.com/scholar?cites=9019091454858686906&as_sdt=2005&sciodt=0,5&hl=en): 10,700)
