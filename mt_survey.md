@@ -6,8 +6,6 @@
     * [基于规则的方法](#rmt)
     * [基于实例的方法](#ebmt)
     * [基于统计的方法](#statistical_machine_translation)
-        * [词翻译模型](#word_smt)
-        * [短语翻译模型](#phrase_smt)
     * [基于深度学习的方法](#neural_machine_translation)
 * [(三) 神经机器翻译基础：概念和模型](#neural_machine_translation)
     * [词表示学习](#word_representation)
@@ -21,9 +19,6 @@
     * [transformer模型](#transformer)
     * [解码](#decoding_nmt)
     * [多语言](#multilingual_nmt)
-        * [多对一](#many_to_one)
-        * [一对多](#one_to_many)
-        * [多对多](#many_to_many)
     * [多模态](#multimodal_nmt)
 * [(四) 神经机器翻译前沿：问题和现状](#challenges)
     * [开放词表](#oov)
@@ -41,9 +36,9 @@
     * [知识融合](#knowledge_merge)
         * [词汇知识融合](#word_knowledge_merge)
         * [短语知识融合](#phrase_knowledge_merge)
-        * [源端句法知识](#src_syntax_merge)
-        * [目标端句法知识](#tgt_syntax_merge)
-        * [图谱知识融合](#graph_knowledge_merge)
+        * [源端句法知识融合](#src_syntax_merge)
+        * [目标端句法知识融合](#tgt_syntax_merge)
+        * [世界知识融合](#world_knowledge_merge)
     * [解码问题](#decoding_space)
         * [双向解码](#decoding_bi)
         * [层次解码](#decoding_heir)
@@ -225,14 +220,19 @@
 <h3 id="knowledge_merge">知识融合</h3>
 
 <h4 id="word_knowledge_merge">词汇知识融合</h4>
+外部词典
+词性多特征嵌入
+词对齐
 
 <h4 id="phrase_knowledge_merge">短语知识融合</h4>
+外部词典
+短语编码和解码
 
-<h4 id="src_syntax_merge">源端句法知识</h4>
+<h4 id="src_syntax_merge">源端句法知识融合</h4>
 
-<h4 id="tgt_syntax_merge">目标端句法知识</h4>
+<h4 id="tgt_syntax_merge">目标端句法知识融合</h4>
 
-<h4 id="graph_knowledge_merge">图谱知识融合</h4>
+<h4 id="world_knowledge_merge">世界知识融合</h4>
 
 <h3 id="decoding_space">解码搜索空间</h3>
 
