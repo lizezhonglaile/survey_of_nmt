@@ -15,8 +15,8 @@
         * [基于RNN的序列模型](#rnn_seq2seq)
         * [基于CNN的序列模型](#cnn_seq2seq)
         * [其他序列模型](#other_seq2seq)
-    * [注意力机制](#attention)
-    * [transformer模型](#transformer)
+        * [注意力机制](#attention)
+        * [transformer模型](#transformer)
     * [解码](#decoding_nmt)
     * [多语言](#multilingual_nmt)
     * [多模态](#multimodal_nmt)
@@ -120,11 +120,11 @@
 
 <h4 id="other_seq2seq">其他序列模型</h4>
 
-<h3 id="attention">注意力机制</h3>
+<h4 id="attention">注意力机制</h3>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/attention.png" width="55%" height="55%"></div>
 <div align="center">注意力模型</div>
 
-<h3 id="transformer">transformer模型</h3>
+<h4 id="transformer">transformer模型</h3>
 
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/transformer.jpg" width="75%" height="75%"></div>
 <div align="center">transformer模型</div>
