@@ -63,8 +63,7 @@
 * [(七) 开源工具](#open_tool)
     * [翻译模型](#translation_tool)
     * [数据预处理](#preprocess_tool)
-    * [评测](#eval_tool)
-    * [分析](#analysis_tool)
+    * [分析和评测](#eval_analysis_tool)
 * [(八) 参考文献](#refence)
 
 <h2 id="history">(一) 前言</h2>
@@ -276,9 +275,7 @@
 
 <h3 id="preprocess_tool">数据预处理</h3>
 
-<h3 id="eval_tool">评测</h3>
-
-<h3 id="analysis_tool">分析</h3>
+<h3 id="eval_analysis_tool">分析和评测</h3>
 
 <h2 id="refence">(八) 参考文献</h2>
 
