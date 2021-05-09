@@ -1,4 +1,4 @@
-# 机器翻译技术调研
+# 神经机器翻译技术调研
 * [(一) 前言](#history)
 * [(二) 主要技术范式](#methods_machine_translation)
     * [基于规则的方法](#rmt)
@@ -46,6 +46,8 @@
         * [并行解码](#decoding_parallel)
         * [曝光偏置](#decoding_exposuer)
     * [模型可解释性](#understanding)
+        * [显式建模](#explict_model)
+        * [可视化](#visualize)
     * [情感和文学性](#elegent_nmt)
 * [(五) 效果评测](#evaluation)
     * [公开数据集](#corpus)
@@ -231,6 +233,10 @@
 
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/black-box.jpg" width="55%" height="55%"></div>
 <div align="center">黑盒模型</div>
+
+<h4 id="explict_model">显式建模</h4>
+
+<h4 id="visualize">可视化</h4>
 
 <h3 id="elegent_nmt">情感和文学性</h3>
 
