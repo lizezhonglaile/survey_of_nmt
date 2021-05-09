@@ -1,34 +1,22 @@
 # 机器翻译技术调研
 * [(一) 前言](#history)
 * [(二) 主要技术范式](#methods_machine_translation)
-    * [直接机器翻译](#direct_mt)
-    * [句法转换机器翻译](#syntax_tranduct_mt)
-    * [基于中间语言的机器翻译](#interlingua_mt)
-    * [基于规则的机器翻译](#rmt)
-    * [基于实例的机器翻译](#ebmt)
-    * [基于统计的机器翻译](#statistical_machine_translation)
+    * [基于规则的方法](#rmt)
+    * [基于实例的方法](#ebmt)
+    * [基于统计的方法](#statistical_machine_translation)
         * [词翻译模型](#word_smt)
         * [短语翻译模型](#phrase_smt)
-        * [层次短语翻译模型](#heir_smt)
-        * [其他统计翻译模型](#other_smt)
-    * [基于神经网络的机器翻译](#neural_machine_translation)
+    * [基于深度学习的方法](#neural_machine_translation)
 * [(三) 神经机器翻译基础：概念和模型](#neural_machine_translation)
     * [词表示学习](#word_representation)
         * [单语言词表示](#monolingual_word_representation)
         * [跨语言词表示](#cross_word_representation)
-    * [句子表示学习](#sent_representation)
-        * [单语言句子表示](#monolingual_sent_representation)
-        * [跨语言句子表示](#cross_sent_representation)
     * [seq2seq模型](#seq2seq)
         * [基于RNN的序列模型](#rnn_seq2seq)
         * [基于CNN的序列模型](#cnn_seq2seq)
         * [其他序列模型](#other_seq2seq)
     * [注意力模型](#attention)
-        * [基础注意力模型](#basic_attention)
-        * [注意力改进](#improve_attention)
     * [transformer模型](#transformer)
-        * [transformer基础模型](#basic_transformer)
-        * [transformer变种模型](#improve_transformer)
     * [解码](#decoding_nmt)
     * [多语言](#multilingual_nmt)
         * [多对一](#many_to_one)
@@ -36,7 +24,7 @@
         * [多对多](#many_to_many)
     * [多模态](#multimodal_nmt)
 * [(四) 神经机器翻译前沿：挑战，现状和未来](#challenges)
-    * [稀疏词](#oov)
+    * [开放词表](#oov)
         * [细粒度神经模型](#char_nmt)
     * [忠实度](#loyal_translation)
     * [资源稀缺](#low_resource)
@@ -45,13 +33,11 @@
         * [预训练模型](#pretraining)
         * [领域迁移](#domain_transfer)
         * [多语言迁移](#multi_lingual_transfer)
-    * [语言学知识融合](#linguistic_knowledge_merge)
-        * [源语言知识融合](#src_linguistic_knowledge_merge)
-        * [目标语言知识融合](#tgt_linguistic_knowledge_merge)
-    * [外部知识融合](#world_knowledge_merge)
-        * [词语知识融合](#word_knowledge_merge)
+    * [知识融合](#knowledge_merge)
+        * [词汇知识融合](#word_knowledge_merge)
         * [短语知识融合](#phrase_knowledge_merge)
-        * [句子知识融合](#sent_knowledge_merge)
+        * [源端句法知识](#src_syntax_merge)
+        * [目标端句法知识](#tgt_syntax_merge)
         * [图谱知识融合](#graph_knowledge_merge)
     * [解码问题](#decoding_space)
         * [双向解码](#decoding_bi)
@@ -62,10 +48,11 @@
     * [模型可解释性](#understanding)
     * [情感和文学性](#elegent_nmt)
 * [(五) 效果评测](#evaluation)
-    * [公开数据集和评测](#public_eval)
+    * [公开数据集](#corpus)
     * [人工评测](#human_eval)
     * [自动评测](#auto_eval)
-* [(六) 参考文献](#refence)
+* [(六) 开源工具](#open_tool)
+* [(七) 参考文献](#refence)
 
 <h2 id="history">(一) 前言</h2>
 　　“机器翻译”是指利用计算机实现自然语言的自动翻译的技术。更广义的翻译包含了多模态机器翻译，即输入出了包括文本信息，还可能包括语音，图像，视频等多模态信息。大体上，机器翻译的发展可以分为一下几个阶段：早期探索时期(1933-1956)；第一次热潮时期(1956-1966)；商用的基于规则时期(1967-2007)；统计机器学习时期(1993-2016)；神经网络机器翻译时期，2013至今。
@@ -81,17 +68,11 @@
 
 <h2 id="methods_machine_translation">(二) 主要技术范式</h2>
 
-<h3 id="direct_mt">直接机器翻译</h3>
+<h3 id="rmt">基于规则的方法</h3>
 
-<h3 id="syntax_tranduct_mt">句法转换机器翻译</h3>
+<h3 id="ebmt">基于实例的方法</h3>
 
-<h3 id="interlingua_mt">基于中间语言的机器翻译</h3>
-
-<h3 id="rmt">基于规则的机器翻译</h3>
-
-<h3 id="ebmt">基于实例的机器翻译</h3>
-
-<h3 id="statistical_machine_translation">基于统计的机器翻译</h3>
+<h3 id="statistical_machine_translation">基于统计的方法</h3>
 
 1993年，IBM的 Brown et al. 发表了The mathematics of statistical machine translation: Parameter estimation。这篇文章奠定了此后20年机器翻译的基础。这篇文章将机器翻译描述为一个信道模型
 
@@ -101,11 +82,7 @@
 
 <h4 id="phrase_smt">短语翻译模型</h4>
 
-<h4 id="heir_smt">层次短语翻译模型</h4>
-
-<h4 id="other_smt">其他统计翻译模型</h4>
-
-<h3 id="smt_tutorials">基于神经网络的机器翻译</h3>
+<h3 id="smt_tutorials">基于深度学习的方法</h3>
 与统计机器翻译的离散表示方法不同，神经机器翻译采用连续空间表示方法（Continuous  Space Representation）表示词语、短语和句子。在翻译建模上，不需要词对齐、翻译规则抽取等统计机器翻译的必要步骤，完全采用神经网络完成从源语言到目标语言的映射。
 
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/deeplearning.png" width="75%" height="75%"></div>
@@ -120,12 +97,6 @@
 <h4 id="monolingual_word_representation">单语言词表示</h4>
 
 <h4 id="cross_word_representation">跨语言词表示</h4>
-
-<h3 id="sent_representation">句子表示学习</h3>
-
-<h4 id="monolingual_sent_representation">单语言句子表示</h4>
-
-<h4 id="cross_sent_representation">跨语言句子表示</h4>
     
 <h3 id="seq2seq">seq2seq模型</h3>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png" width="55%" height="55%"></div>
@@ -141,18 +112,11 @@
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/attention.png" width="55%" height="55%"></div>
 <div align="center">注意力模型</div>
 
-<h4 id="basic_attention">transformer基础模型</h4>
-
-<h4 id="improve_attention">transformer变种模型</h4>
-
 <h3 id="transformer">transformer模型</h3>
-
-<h4 id="basic_transformer">基础transformer模型</h4>
 
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/transformer.jpg" width="75%" height="75%"></div>
 <div align="center">transformer模型</div>
 
-<h4 id="improve_transformer">改进transformer</h4>
 
 <h3 id="decoding_nmt">解码</h3>
 
@@ -197,7 +161,7 @@
 
 <h2 id="challenges">(四) 神经机器翻译前沿：挑战，现状和未来</h2>
 
-<h3 id="oov">稀疏词问题</h3>
+<h3 id="oov">开放词表</h3>
 
 <h4 id="char_nmt">细粒度神经模型</h4>
 字符级神经机器翻译（Character Level NMT）是为了解决未登录词、词语切分、词语形态变化等问题提出的一种神经机器翻译模型，主要特点是减小了输入和输出粒度。
@@ -239,19 +203,15 @@
 
 <h4 id="multi_lingual_transfer">跨语言迁移</h4>
 
-<h3 id="linguistic_knowledge_merge">语言学知识融合</h3>
+<h3 id="knowledge_merge">知识融合</h3>
 
-<h4 id="src_linguistic_knowledge_merge">源语言知识融合</h4>
-
-<h4 id="tgt_linguistic_knowledge_merge">目标语言知识融合</h4>
-
-<h3 id="world_knowledge_merge">外部知识融合</h3>
-
-<h4 id="word_knowledge_merge">词语知识融合</h4>
+<h4 id="word_knowledge_merge">词汇知识融合</h4>
 
 <h4 id="phrase_knowledge_merge">短语知识融合</h4>
 
-<h4 id="sent_knowledge_merge">句子知识融合</h4>
+<h4 id="src_syntax_merge">源端句法知识</h4>
+
+<h4 id="tgt_syntax_merge">目标端句法知识</h4>
 
 <h4 id="graph_knowledge_merge">图谱知识融合</h4>
 
@@ -276,13 +236,15 @@
 
 <h2 id="evaluation">(五) 效果评测</h2>
 
-<h3 id="public_eval">公开数据集和评测</h3>
+<h3 id="corpus">数据集</h3>
 
 <h3 id="human_eval">人工评测</h3>
 
 <h3 id="auto_eval">自动评测</h3>
 
-<h2 id="refence">(六) 参考文献</h2>
+<h2 id="open_tool">(六) 开源工具</h2>
+
+<h2 id="refence">(七) 参考文献</h2>
 
 * Peter E. Brown, Stephen A. Della Pietra, Vincent J. Della Pietra, and Robert L. Mercer. 1993. [The Mathematics of Statistical Machine Translation: Parameter Estimation](http://aclweb.org/anthology/J93-2003). *Computational Linguistics*. ([Citation](https://scholar.google.com/scholar?cites=2259057253133260714&as_sdt=2005&sciodt=0,5&hl=en): 5,218)
 * Kishore Papineni, Salim Roukos, Todd Ward, and Wei-Jing Zhu. 2002. [BLEU: a Method for Automatic Evaluation of Machine Translation](http://aclweb.org/anthology/P02-1040). In *Proceedings of ACL 2002*. ([Citation](https://scholar.google.com/scholar?cites=9019091454858686906&as_sdt=2005&sciodt=0,5&hl=en): 10,700)
