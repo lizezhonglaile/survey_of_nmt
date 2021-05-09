@@ -1,5 +1,7 @@
 # 神经机器翻译技术调研
 * [(一) 前言](#history)
+    * [问题起源](#problem_definition)
+    * [解决意义](#problem_value)
 * [(二) 主要技术范式](#methods_machine_translation)
     * [基于规则的方法](#rmt)
     * [基于实例的方法](#ebmt)
@@ -57,6 +59,8 @@
 * [(七) 参考文献](#refence)
 
 <h2 id="history">(一) 前言</h2>
+
+<h3 id="problem_definition">问题起源</h3>
 　　“机器翻译”是指利用计算机实现自然语言的自动翻译的技术。更广义的翻译包含了多模态机器翻译，即输入出了包括文本信息，还可能包括语音，图像，视频等多模态信息。大体上，机器翻译的发展可以分为一下几个阶段：早期探索时期(1933-1956)；第一次热潮时期(1956-1966)；商用的基于规则时期(1967-2007)；统计机器学习时期(1993-2016)；神经网络机器翻译时期，2013至今。
   
 　　早在1949 年,Weaver 发表的以《翻译》为题的备忘录中就提出:“当我阅读一篇用俄语写的文章的时候,我可以说,这篇文章实际上是用英语写的,只不过它是用另外一种奇怪的符号编了码而已,当我在阅读时,我是在进行解码。”这实际上就是基于信源信道思想的统计机器翻译方法的萌芽。
@@ -67,6 +71,8 @@
 
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/mt_history.jpg" width="75%" height="75%"></div>
 <div align="center">机器翻译发展史</div>
+
+<h3 id="problem_value">解决意义</h3>
 
 <h2 id="methods_machine_translation">(二) 主要技术范式</h2>
 
