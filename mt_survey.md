@@ -13,11 +13,11 @@
     * [词表示学习](#word_representation)
         * [单语言词表示](#monolingual_word_representation)
         * [跨语言词表示](#cross_word_representation)
-    * [seq2seq模型](#seq2seq)
+    * [encoder-decoder框架](#encoder-decoder)
         * [基于RNN的序列模型](#rnn_seq2seq)
         * [基于CNN的序列模型](#cnn_seq2seq)
         * [其他序列模型](#other_seq2seq)
-    * [注意力模型](#attention)
+    * [注意力机制](#attention)
     * [transformer模型](#transformer)
     * [解码](#decoding_nmt)
     * [多语言](#multilingual_nmt)
@@ -27,12 +27,15 @@
     * [多模态](#multimodal_nmt)
 * [(四) 神经机器翻译前沿：问题和现状](#challenges)
     * [开放词表](#oov)
-        * [细粒度神经模型](#char_nmt)
+        * [子词模型](#subword_nmt)
+        * [字符模型](#char_nmt)
+        * [混合模型](#hybrid_nmt)
+        * [字节模型](#byte_nmt)
     * [忠实度](#loyal_translation)
     * [资源稀缺](#low_resource)
         * [数据增强](#data_argument)
         * [单语语料利用](#monolingual_exploit)
-        * [预训练模型](#pretraining)
+        * [预训练](#pretraining)
         * [领域迁移](#domain_transfer)
         * [多语言迁移](#multi_lingual_transfer)
     * [知识融合](#knowledge_merge)
@@ -46,10 +49,11 @@
         * [层次解码](#decoding_heir)
         * [二次解码](#decoding_mutli_pass)
         * [并行解码](#decoding_parallel)
-        * [曝光偏置](#decoding_exposuer)
+    * [模型一致性](#model_consistence)
     * [模型可解释性](#understanding)
         * [显式建模](#explict_model)
         * [可视化](#visualize)
+    * [模型健壮性](#model_robust)
     * [情感和文学性](#elegent_nmt)
 * [(五) 神经机器翻译的未来](#future)
 * [(六) 效果评测](#evaluation)
@@ -57,6 +61,10 @@
     * [人工评测](#human_eval)
     * [自动评测](#auto_eval)
 * [(七) 开源工具](#open_tool)
+    * [翻译模型](#translation_tool)
+    * [数据预处理](#preprocess_tool)
+    * [评测](#eval_tool)
+    * [分析](#analysis_tool)
 * [(八) 参考文献](#refence)
 
 <h2 id="history">(一) 前言</h2>
@@ -107,7 +115,7 @@
 
 <h4 id="cross_word_representation">跨语言词表示</h4>
     
-<h3 id="seq2seq">seq2seq模型</h3>
+<h3 id="encoder-decoder">encoder-decoder框架</h3>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png" width="55%" height="55%"></div>
 <div align="center">seq2seq模型</div>
 
@@ -117,7 +125,7 @@
 
 <h4 id="other_seq2seq">其他序列模型</h4>
 
-<h3 id="attention">注意力模型</h3>
+<h3 id="attention">注意力机制</h3>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/attention.png" width="55%" height="55%"></div>
 <div align="center">注意力模型</div>
 
@@ -153,26 +161,18 @@
 <h3 id="multimodal_nmt">多模态</h3>
 多模态神经机器翻译利用的资源不限于文本，目前研究主要集中在利用图像信息提高神经机器翻译效果。这类方法通常采用两个编码器，一个编码器对文本信息编码，与普通的神经机器翻译相同；另外一个编码器对图像信息编码。在解码时，通过注意力机制将不同模态的信息应用在翻译中。
 
-<h3 id="pretraining">单语语料利用</h3>
-单语语料是一种非常重要的资源，具有数量大、获取方便的优势。在统计机器翻译中，大规模目标语言单语语料可以提供优质的语言模型，对提高翻译流利度起着很重要作用。在神经机器翻译中可以利用的单语语料主要分为目标语言单语语料和源语言单语语料。
-
-目标语言单语语料应用之一是语言模型， Gulcehre 等人提出一种利用大规模单语语料提高神经机器翻译效果的方法。采用单语语料训练神经网络语言模型，将之集成到神经机器翻译中，集成方法分为浅层集成和深层集成。浅层集成方法在解码时，把语言模型作为一种特征用来生成候选词；深层集成方法将神经机器翻译模型、语言模型的隐藏状态连接在一起，通过控制机制动态平衡两种模型对解码的影响，在解码时可以捕捉到语言模型信息。这两种集成方法均可以提高翻译效果，其中深层集成方法效果更为明显 。 此外， Domhan 等人则提出采用多任务学习方法，将神经机器翻译模型和目标语言的语言模型联合训练，以此利用大规模目标语言单语语料。
-
-目标语言单语语料的另一使用方法是 Sennrich 等人提出的训练数据构造方法：回翻译（Back-translation）方法。利用目标语言单语语料构造伪双语数据，并加入到训练语料。这种融合方法对神经机器翻译模型不作改变，方法简单有效，虽然在一定程度上提高了翻译效果，但是效果提升取决于构造数据的质量。
-
-以上研究都是利用目标语言单语语料，Zhang 等人提出了将源语言单语语料应用到神经机器翻译的方法。实现方式有两种，第一种方法同样采用了构造数据思想，在构造方式上通过自学习的方法扩大双语训练语料规模；另外一种方法通过多任务学习增强编码器对源语言的表示质量。这两种方法均能够大幅提升翻译效果。不足之处是源语言单语语料的数量和题材会对翻译模型性能产生影响。
-
-同时利用源语言和目标语言单语语料，主要有Cheng 等人提出的半监督学习方法。基本思想是将自编码引入源语言到目标语言翻译模型和目标语言到源语言翻译模型，通过半监督方法训练双向神经机器翻译，以此利用源语言和目标语言单语语料提高翻译效果。这种方法显著优势是可以同时利用源语言和目标语言的单语语料，不足之处是对单语语料中的未登录词没有处理能力。
-此外，Ramachandran 等人提出一种更为简单的方法，将序列到序列模型看作为两个语言模型，通过大规模单语语料分别训练源语言和目标语言的语言模型；神经机器翻译模型的编码器和解码器参数分别由两个语言模型参数初始化；然后利用双语平行语料训练，训练过程中语言模型参数同时调整。
-
-
-<h3 id="beyond_parallel">预训练模型</h3>
-
 <h2 id="challenges">(四) 神经机器翻译前沿：挑战和现状</h2>
 
 <h3 id="oov">开放词表</h3>
 
-<h4 id="char_nmt">细粒度神经模型</h4>
+<h4 id="subword_nmt">子词模型</h4>
+
+<h4 id="char_nmt">字符模型</h4>
+
+<h4 id="hybrid_nmt">混合模型</h4>
+
+<h4 id="byte_nmt">字节模型</h4>
+
 字符级神经机器翻译（Character Level NMT）是为了解决未登录词、词语切分、词语形态变化等问题提出的一种神经机器翻译模型，主要特点是减小了输入和输出粒度。
 词语编码方案
 
@@ -204,7 +204,18 @@
 
 <h4 id="data_argument">数据增强</h4>
 
-<h4 id="monolingual_exploit">单语语料利用</h4>
+<h4 id="monolingual_exploit">
+
+单语语料是一种非常重要的资源，具有数量大、获取方便的优势。在统计机器翻译中，大规模目标语言单语语料可以提供优质的语言模型，对提高翻译流利度起着很重要作用。在神经机器翻译中可以利用的单语语料主要分为目标语言单语语料和源语言单语语料。
+
+目标语言单语语料应用之一是语言模型， Gulcehre 等人提出一种利用大规模单语语料提高神经机器翻译效果的方法。采用单语语料训练神经网络语言模型，将之集成到神经机器翻译中，集成方法分为浅层集成和深层集成。浅层集成方法在解码时，把语言模型作为一种特征用来生成候选词；深层集成方法将神经机器翻译模型、语言模型的隐藏状态连接在一起，通过控制机制动态平衡两种模型对解码的影响，在解码时可以捕捉到语言模型信息。这两种集成方法均可以提高翻译效果，其中深层集成方法效果更为明显 。 此外， Domhan 等人则提出采用多任务学习方法，将神经机器翻译模型和目标语言的语言模型联合训练，以此利用大规模目标语言单语语料。
+
+目标语言单语语料的另一使用方法是 Sennrich 等人提出的训练数据构造方法：回翻译（Back-translation）方法。利用目标语言单语语料构造伪双语数据，并加入到训练语料。这种融合方法对神经机器翻译模型不作改变，方法简单有效，虽然在一定程度上提高了翻译效果，但是效果提升取决于构造数据的质量。
+
+以上研究都是利用目标语言单语语料，Zhang 等人提出了将源语言单语语料应用到神经机器翻译的方法。实现方式有两种，第一种方法同样采用了构造数据思想，在构造方式上通过自学习的方法扩大双语训练语料规模；另外一种方法通过多任务学习增强编码器对源语言的表示质量。这两种方法均能够大幅提升翻译效果。不足之处是源语言单语语料的数量和题材会对翻译模型性能产生影响。
+
+同时利用源语言和目标语言单语语料，主要有Cheng 等人提出的半监督学习方法。基本思想是将自编码引入源语言到目标语言翻译模型和目标语言到源语言翻译模型，通过半监督方法训练双向神经机器翻译，以此利用源语言和目标语言单语语料提高翻译效果。这种方法显著优势是可以同时利用源语言和目标语言的单语语料，不足之处是对单语语料中的未登录词没有处理能力。
+此外，Ramachandran 等人提出一种更为简单的方法，将序列到序列模型看作为两个语言模型，通过大规模单语语料分别训练源语言和目标语言的语言模型；神经机器翻译模型的编码器和解码器参数分别由两个语言模型参数初始化；然后利用双语平行语料训练，训练过程中语言模型参数同时调整。
 
 <h4 id="pretraining">预训练模型</h4>
 
@@ -234,8 +245,6 @@
 
 <h4 id="decoding_parallel">并行解码</h4>
 
-<h4 id="decoding_exposuer">曝光偏置</h4>
-
 <h3 id="understanding">模型可解释性</h3>
 
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/black-box.jpg" width="55%" height="55%"></div>
@@ -244,6 +253,10 @@
 <h4 id="explict_model">显式建模</h4>
 
 <h4 id="visualize">可视化</h4>
+
+<h3 id="model_consistence">模型一致性</h3>
+
+<h3 id="model_robust">模型健壮性</h3>
 
 <h3 id="elegent_nmt">情感和文学性</h3>
 
@@ -258,6 +271,14 @@
 <h3 id="auto_eval">自动评测</h3>
 
 <h2 id="open_tool">(七) 开源工具</h2>
+
+<h3 id="translation_tool">翻译模型</h3>
+
+<h3 id="preprocess_tool">数据预处理</h3>
+
+<h3 id="eval_tool">评测</h3>
+
+<h3 id="analysis_tool">分析</h3>
 
 <h2 id="refence">(八) 参考文献</h2>
 
