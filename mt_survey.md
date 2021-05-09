@@ -34,16 +34,16 @@
         * [领域迁移](#domain_transfer)
         * [多语言迁移](#multi_lingual_transfer)
     * [知识融合](#knowledge_merge)
-        * [词汇知识融合](#word_knowledge_merge)
-        * [短语知识融合](#phrase_knowledge_merge)
-        * [源端句法知识融合](#src_syntax_merge)
-        * [目标端句法知识融合](#tgt_syntax_merge)
-        * [世界知识融合](#world_knowledge_merge)
+        * [词汇知识](#word_knowledge_merge)
+        * [短语知识](#phrase_knowledge_merge)
+        * [源端句法知识](#src_syntax_merge)
+        * [目标端句法知识](#tgt_syntax_merge)
+        * [世界知识](#world_knowledge_merge)
     * [解码问题](#decoding_space)
         * [双向解码](#decoding_bi)
-        * [层次解码](#decoding_heir)
+        * [层次解码](#decoding_heir)     
+        * [非自回归解码](#decoding_parallel)
         * [二次解码](#decoding_mutli_pass)
-        * [并行解码](#decoding_parallel)
     * [模型一致性](#model_consistence)
     * [模型可控性](#model_control)
     * [模型可解释性](#understanding)
@@ -222,30 +222,30 @@
 
 <h3 id="knowledge_merge">知识融合</h3>
 
-<h4 id="word_knowledge_merge">词汇知识融合</h4>
+<h4 id="word_knowledge_merge">词汇知识</h4>
 外部词典
 词性多特征嵌入
 词对齐
 
-<h4 id="phrase_knowledge_merge">短语知识融合</h4>
+<h4 id="phrase_knowledge_merge">短语知识</h4>
 外部词典
 短语编码和解码
 
-<h4 id="src_syntax_merge">源端句法知识融合</h4>
+<h4 id="src_syntax_merge">源端句法知识</h4>
 
-<h4 id="tgt_syntax_merge">目标端句法知识融合</h4>
+<h4 id="tgt_syntax_merge">目标端句法知识</h4>
 
-<h4 id="world_knowledge_merge">世界知识融合</h4>
+<h4 id="world_knowledge_merge">世界知识</h4>
 
-<h3 id="decoding_space">解码搜索空间</h3>
+<h3 id="decoding_space">解码问题</h3>
 
 <h4 id="decoding_bi">双向解码</h4>
 
 <h4 id="decoding_heir">层次解码</h4>
 
-<h4 id="decoding_mutli_pass">二次解码</h4>
+<h4 id="decoding_parallel">非自回归解码</h4>
 
-<h4 id="decoding_parallel">并行解码</h4>
+<h4 id="decoding_mutli_pass">二次解码</h4>
 
 <h3 id="understanding">模型可解释性</h3>
 
