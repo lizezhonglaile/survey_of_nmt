@@ -11,7 +11,7 @@
     * [词表示学习](#word_representation)
         * [单语言词表示](#monolingual_word_representation)
         * [跨语言词表示](#cross_word_representation)
-    * [encoder-decoder框架](#encoder-decoder)
+    * [翻译建模：encoder-decoder框架](#encoder-decoder)
         * [基于RNN的序列模型](#rnn_seq2seq)
         * [基于CNN的序列模型](#cnn_seq2seq)
         * [其他序列模型](#other_seq2seq)
@@ -111,7 +111,7 @@
 
 <h4 id="cross_word_representation">跨语言词表示</h4>
     
-<h3 id="encoder-decoder">encoder-decoder框架</h3>
+<h3 id="encoder-decoder">翻译建模：encoder-decoder框架</h3>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png" width="55%" height="55%"></div>
 <div align="center">seq2seq模型</div>
 
