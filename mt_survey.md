@@ -168,7 +168,7 @@
 
 <h3 id="beyond_parallel">预训练模型</h3>
 
-<h2 id="challenges">(四) 神经机器翻译前沿：挑战，现状和未来</h2>
+<h2 id="challenges">(四) 神经机器翻译前沿：挑战和现状</h2>
 
 <h3 id="oov">开放词表</h3>
 
