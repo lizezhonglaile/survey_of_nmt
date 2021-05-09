@@ -17,7 +17,7 @@
         * [注意力机制](#attention)
         * [transformer模型](#transformer)
     * [翻译解码](#decoding_nmt)
-    * [翻译模型的训练](#train_nmt)
+    * [翻译模型学习](#learning_nmt)
     * [多语言](#multilingual_nmt)
     * [多模态](#multimodal_nmt)
 * [(四) 神经机器翻译前沿：问题和现状](#challenges)
@@ -130,7 +130,9 @@
 
 <h3 id="decoding_nmt">翻译解码</h3>
 
-<h3 id="train_nmt">翻译模型的训练</h3>
+<h3 id="learning_nmt">翻译模型学习</h3>
+损失函数
+其他学习范式，无监督，半监督
 
 <h3 id="multilingual_nmt">多语言</h3>
 多语言机器翻译，区别于通常一种语言到另外一种语言的一对一翻译，能够采用一个模型完成多种语言之间翻译。基于神经网络的多语言机器翻译源于序列到序列学习和多任务学习，从类型上可以分为单语到多语翻译、多语到单语翻译，以及多语到多语翻译。
