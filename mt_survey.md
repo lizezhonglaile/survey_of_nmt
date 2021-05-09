@@ -14,7 +14,6 @@
     * [翻译建模：encoder-decoder框架](#encoder-decoder)
         * [基于RNN的序列模型](#rnn_seq2seq)
         * [基于CNN的序列模型](#cnn_seq2seq)
-        * [其他序列模型](#other_seq2seq)
         * [注意力机制](#attention)
         * [transformer模型](#transformer)
     * [翻译解码](#decoding_nmt)
@@ -118,8 +117,6 @@
 <h4 id="rnn_seq2seq">基于RNN的序列模型</h4>
 
 <h4 id="cnn_seq2seq">基于CNN的序列模型</h4>
-
-<h4 id="other_seq2seq">其他序列模型</h4>
 
 <h4 id="attention">注意力机制</h3>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/attention.png" width="55%" height="55%"></div>
