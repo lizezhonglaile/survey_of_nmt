@@ -45,6 +45,7 @@
         * [二次解码](#decoding_mutli_pass)
         * [并行解码](#decoding_parallel)
     * [模型一致性](#model_consistence)
+    * [模型可控性](#model_control)
     * [模型可解释性](#understanding)
         * [显式建模](#explict_model)
         * [可视化](#visualize)
@@ -254,6 +255,8 @@
 <h4 id="visualize">可视化</h4>
 
 <h3 id="model_consistence">模型一致性</h3>
+
+<h3 id="model_control">模型可控性</h3>
 
 <h3 id="model_robust">模型健壮性</h3>
 
