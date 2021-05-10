@@ -8,9 +8,9 @@
     * [基于统计的方法](#statistical_machine_translation)
     * [基于深度学习的方法](#neural_machine_translation)
 * [(三) 神经机器翻译基础：概念和模型](#neural_machine_translation)
-    * [词表示学习](#word_representation)
-        * [单语言词表示](#monolingual_word_representation)
-        * [跨语言词表示](#cross_word_representation)
+    * [词嵌入](#word_representation)
+        * [单语言词嵌入](#monolingual_word_representation)
+        * [跨语言词嵌入](#cross_word_representation)
     * [翻译建模：encoder-decoder框架](#encoder-decoder)
         * [基于RNN的序列到序列模型](#rnn_seq2seq)  
         * [注意力机制](#attention)
@@ -103,11 +103,11 @@
 
 <h2 id="neural_machine_translation">(三) 神经机器翻译基础：概念和模型</h2>
 本章围绕机器翻译三个最核心问题展开，即翻译建模，模型训练和解码。在此之前，有必要先介绍一下词表示学习，它是整个基于深度学习的自然语言处理基础，也是神经网络机器翻的基础。然后围绕核心问题，介绍翻译模型的几个里程碑意义的进展，模型训练的目标函数选择以及基于 Beam search 的翻译解码算法。最后，对于近几年比较新的多语言，多模态也进行一个简单的介绍。
-<h3 id="word_representation">词表示学习</h3>
+<h3 id="word_representation">词嵌入</h3>
 
-<h4 id="monolingual_word_representation">单语言词表示</h4>
+<h4 id="monolingual_word_representation">单语言词嵌入</h4>
 
-<h4 id="cross_word_representation">跨语言词表示</h4>
+<h4 id="cross_word_representation">跨语言词嵌入</h4>
     
 <h3 id="encoder-decoder">翻译建模：encoder-decoder框架</h3>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png" width="55%" height="55%"></div>
