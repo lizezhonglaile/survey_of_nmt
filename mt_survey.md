@@ -83,6 +83,8 @@
 
 <h3 id="ebmt">基于实例的方法</h3>
 
+Makoto Nagao. A framework of a mechanical translation between japanese and english by analogy principle. Artificial and human intelligence, pages 351–354, 1984.
+
 <h3 id="statistical_machine_translation">基于统计的方法</h3>
 
 1993年，IBM的 Brown et al. 发表了The mathematics of statistical machine translation: Parameter estimation。这篇文章奠定了此后20年机器翻译的基础。这篇文章将机器翻译描述为一个信道模型
@@ -197,6 +199,9 @@ C. Wang, K. Cho, J. Gu, Neural machine translation with byte-level subwords, in:
 
 
 <h3 id="loyal_translation">忠实度</h3>
+
+Z. Tu, Z. Lu, Y. Liu, X. Liu, H. Li, Modeling coverage for neural machine translation, in: Proceedings of ACL, 2016.
+
 忠实度，即“信达雅”中的信，是翻译最起码的要求。不忠实主要表现为漏翻译和过翻译。
 过度翻译指一些词或短语被重复地翻译，翻译不充分指部分词或短语没有被完整地翻译。该问题在神经机器翻译中普遍存在，包括基于注意力的神经机器翻译。
 
@@ -257,11 +262,16 @@ arXiv:2002.06823 (2020).
 词性多特征嵌入
 词对齐
 
+
+133 Xing Wang, Zhaopeng Tu, and Min Zhang. Incorporating statistical machine translation word knowledge into neural machine translation. IEEE/ACM Transactions on Audio, Speech,and Language Processing, 26(12):2255–2266, 2018.
+
 R. Sennrich, B. Haddow, Linguistic input features improve neural machine translation, in: Proceedings of WMT, 2016, pp. 83–91.
 
 <h4 id="phrase_knowledge_merge">短语知识</h4>
 外部词典
 短语编码和解码
+
+Xing Wang, Zhaopeng Tu, Deyi Xiong, and Min Zhang. Translating phrases in neural machine translation. In Proceedings of EMNLP, 2017.
 
 
 <h4 id="syntax_merge">句法知识</h4>
@@ -299,6 +309,8 @@ J. Yang, S. Ma, D. Zhang, Z. Li, M. Zhou, Improving neural machine translation w
 <h4 id="decoding_heir">层次解码</h4>
 
 <h4 id="decoding_parallel">非自回归解码</h4>
+
+Jiatao Gu, James Bradbury, Caiming Xiong, Victor OK Li, and Richard Socher. Non-autoregressive neural machine translation. In Proceedings of ICLR, 2018.
 
 <h4 id="decoding_mutli_pass">二次解码</h4>
 
