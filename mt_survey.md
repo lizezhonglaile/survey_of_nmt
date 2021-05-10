@@ -167,11 +167,20 @@ beam search
 
 <h4 id="subword_nmt">子词模型</h4>
 
+R. Sennrich, B. Haddow, A. Birch, Neural machine translation of rare words with subword units, in: Proceedings of ACL, 2016.
+
 <h4 id="char_nmt">字符模型</h4>
+
+J. Lee, K. Cho, T. Hofmann, Fully character-level neural machine translation without explicit segmentation, Transactions of the Association for Computational Linguistics 5 (2017) 365–378.
+
 
 <h4 id="hybrid_nmt">混合模型</h4>
 
+[106] M.-T. Luong, C. D. Manning, Achieving open vocabulary neural machine translation with hybrid word-character models, arXiv preprint arXiv:1604.00788 (2016).
+
 <h4 id="byte_nmt">字节模型</h4>
+
+C. Wang, K. Cho, J. Gu, Neural machine translation with byte-level subwords, in: Proceedings of the AAAI Conference on Artificial Intelligence, volume 34, 2020, pp. 9154–9160.
 
 字符级神经机器翻译（Character Level NMT）是为了解决未登录词、词语切分、词语形态变化等问题提出的一种神经机器翻译模型，主要特点是减小了输入和输出粒度。
 词语编码方案
@@ -206,6 +215,14 @@ beam search
 
 <h4 id="monolingual_exploit">单语语料利用</h4>
 
+R. Sennrich, B. Haddow, A. Birch, Improving neural machine translation models with monolingual data, in: Proceedings of ACL, 2016, pp.86–96.
+
+V. C. D. Hoang, P. Koehn, G. Haffari, T. Cohn, Iterative back-translation for neural machine translation, in: Proceedings of the 2nd Workshop on Neural Machine Translation and Generation, 2018, pp. 18–24.
+
+Y. Cheng,W. Xu, Z. He,W. He, H.Wu, M. Sun, Y. Liu, Semi-supervised learning for neural machine translation, in: Proceedings of ACL, 2016, pp. 1965–1974.
+
+[78] D. He, Y. Xia, T. Qin, L. Wang, N. Yu, T.-Y. Liu, W.-Y. Ma, Dual learning for machine translation, in: Advances in NeurIPS, 2016, pp. 820–828.
+
 单语语料是一种非常重要的资源，具有数量大、获取方便的优势。在统计机器翻译中，大规模目标语言单语语料可以提供优质的语言模型，对提高翻译流利度起着很重要作用。在神经机器翻译中可以利用的单语语料主要分为目标语言单语语料和源语言单语语料。
 
 目标语言单语语料应用之一是语言模型， Gulcehre 等人提出一种利用大规模单语语料提高神经机器翻译效果的方法。采用单语语料训练神经网络语言模型，将之集成到神经机器翻译中，集成方法分为浅层集成和深层集成。浅层集成方法在解码时，把语言模型作为一种特征用来生成候选词；深层集成方法将神经机器翻译模型、语言模型的隐藏状态连接在一起，通过控制机制动态平衡两种模型对解码的影响，在解码时可以捕捉到语言模型信息。这两种集成方法均可以提高翻译效果，其中深层集成方法效果更为明显 。 此外， Domhan 等人则提出采用多任务学习方法，将神经机器翻译模型和目标语言的语言模型联合训练，以此利用大规模目标语言单语语料。
@@ -219,6 +236,14 @@ beam search
 
 <h4 id="pretraining">预训练模型</h4>
 
+M. Lewis, Y. Liu, N. Goyal, M. Ghazvininejad, A. Mohamed, O. Levy, V. Stoyanov, L. Zettlemoyer, Bart: Denoising sequence-to-sequence pre-training for natural language generation, translation, and comprehension, arXiv preprint arXiv:1910.13461 (2019).
+
+S. Edunov, A. Baevski, M. Auli, Pre-trained language model representations
+for language generation, arXiv preprint arXiv:1903.09722 (2019).
+
+J. Zhu, Y. Xia, L. Wu, D. He, T. Qin, W. Zhou, H. Li, T.-Y. Liu, Incorporating bert into neural machine translation, arXiv preprint
+arXiv:2002.06823 (2020).
+
 <h4 id="domain_transfer">跨领域迁移</h4>
 
 <h4 id="multi_lingual_transfer">跨语言迁移</h4>
@@ -230,13 +255,37 @@ beam search
 词性多特征嵌入
 词对齐
 
+
+R. Sennrich, B. Haddow, Linguistic input features improve neural machine translation, in: Proceedings of WMT, 2016, pp. 83–91.
+
 <h4 id="phrase_knowledge_merge">短语知识</h4>
 外部词典
 短语编码和解码
 
+
 <h4 id="syntax_merge">句法知识</h4>
 源端句法知识
 目标端句法知识
+
+A. Eriguchi, K. Hashimoto, Y. Tsuruoka, Tree-to-sequence attentional neural machine translation, in: Proceedings of ACL, 2016, pp. 823–833.
+
+J. Hao, X.Wang, S. Shi, J. Zhang, Z. Tu, Multi-granularity self-attention for neural machine translation, in: Proceedings of EMNLP-IJCNLP, 2019, pp. 886–896.
+
+E. Bugliarello, N. Okazaki, Enhancing machine translation with dependency-aware self-attention, in: Proceedings of ACL, 2020, pp. 1618–1627.
+
+A. Eriguchi, Y. Tsuruoka, K. Cho, Learning to parse and translate improves neural machine translation, in: Proceedings of ACL, 2017, pp. 72–78.
+
+J. G¯u, H. S. Shavarani, A. Sarkar, Top-down tree structured decoding with syntactic connections for neural machine translation and parsing, in: Proceedings of EMNLP, 2018, pp. 401–413.
+
+X. Wang, H. Pham, P. Yin, G. Neubig, A tree-based decoder for neural machine translation, in: Proceedings of EMNLP, 2018, pp. 4772–4777.
+
+S. Wu, D. Zhang, N. Yang, M. Li, M. Zhou, Sequence-to-dependency neural machine translation, in: Proceedings of ACL, 2017, pp. 698–707.
+
+R. Aharoni, Y. Goldberg, Towards string-to-tree neural machine translation, in: Proceedings of ACL, 2017, pp. 132–140.
+
+J. Bastings, I. Titov, W. Aziz, D. Marcheggiani, K. Sima’an, Graph convolutional encoders for syntax-aware neural machine translation, in: Proceedings of EMNLP, 2017, pp. 1957–1967.
+
+J. Yang, S. Ma, D. Zhang, Z. Li, M. Zhou, Improving neural machine translation with soft template prediction, in: Proceedings of WMT, 2020, pp. 5979–5989.
 
 <h4 id="world_knowledge_merge">世界知识</h4>
 
@@ -268,6 +317,8 @@ A. Raganato, J. Tiedemann, An analysis of encoder representations in transformer
 
 
 <h3 id="model_consistence">模型一致性</h3>
+
+M. Ranzato, S. Chopra, M. Auli, W. Zaremba, Sequence level training with recurrent neural networks, in: Proceedings of ICLR, 2016.
 
 <h3 id="model_control">模型可控性</h3>
 
