@@ -20,7 +20,7 @@
     * [翻译解码](#decoding_nmt)
     * [多语言](#multilingual_nmt)
     * [多模态](#multimodal_nmt)
-* [(四) 神经机器翻译前沿：问题和现状](#challenges)
+* [(四) 神经机器翻译前沿：挑战和现状](#challenges)
     * [受限词表](#oov)
         * [子词模型](#subword_nmt)
         * [字符模型](#char_nmt)
