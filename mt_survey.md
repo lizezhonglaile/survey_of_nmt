@@ -252,18 +252,28 @@ beam search
 
 <h3 id="understanding">模型可解释性</h3>
 
-<div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/black-box.jpg" width="55%" height="55%"></div>
-<div align="center">黑盒模型</div>
-
 <h4 id="explict_model">显式建模</h4>
 
+F. Stahlberg, D. Saunders, B. Byrne, An operation sequence model for explainable neural machine translation, in: Proceedings of EMNLP Workshop, 2018, pp. 175–186.
+
 <h4 id="visualize">可视化</h4>
+
+Y. Ding, Y. Liu, H. Luan, M. Sun, Visualizing and understanding neural machine translation, in: Proceedings of ACL, 2017, pp. 1150–1159.
+
+H. Strobelt, S. Gehrmann, M. Behrisch, A. Perer, H. Pfister, A. M. Rush, Seq2seq-vis: A visual debugging tool for sequence-to-sequence models, IEEE transactions on visualization and computer graphics 25 (2019) 353–363.
+
+S. He, Z. Tu, X.Wang, L.Wang, M. Lyu, S. Shi, Towards understanding neural machine translation with word importance, in: Proceedings of EMNLP-IJCNLP, 2019, pp. 953–962.
+
+A. Raganato, J. Tiedemann, An analysis of encoder representations in transformer-based machine translation, in: Proceedings of EMNLP Workshop, 2018, pp. 287–297.
+
 
 <h3 id="model_consistence">模型一致性</h3>
 
 <h3 id="model_control">模型可控性</h3>
 
 <h3 id="model_robust">模型健壮性</h3>
+
+Y. Cheng, Z. Tu, F. Meng, J. Zhai, Y. Liu, Towards robust neural machine translation, in: Proceedings of ACL, 2018, pp. 1756–1766.
 
 <h3 id="elegent_nmt">情感和文学性</h3>
 
@@ -277,13 +287,27 @@ beam search
 
 <h3 id="auto_eval">自动评测</h3>
 
+K. Papineni, S. Roukos, T.Ward,W. Zhu, Bleu: A method for automatic evaluation of machine translation, in: Proceedings of ACL, 2002.
+
 <h2 id="open_tool">(七) 开源工具</h2>
 
 <h3 id="translation_tool">翻译模型</h3>
 
+M. Ott, S. Edunov, A. Baevski, A. Fan, S. Gross, N. Ng, D. Grangier, M. Auli, fairseq: A fast, extensible toolkit for sequence modeling, in: Proceedings of NAACL-HLT (Demonstrations), 2019, pp. 48–53.
+
+Guillaume Klein, etc, OpenNMT: Open-Source Toolkit for Neural Machine Translation, in: Proc. ACL, 2017
+
+A. Vaswani, etc., Tensor2Tensor for neural machine translation, in: Proceedings of AMTA, 2018, pp. 193–199.
+
+Z. Tan, J. Zhang, X. Huang, G. Chen, S.Wang, M. Sun, H. Luan, Y. Liu, THUMT: An open-source toolkit for neural machine translation, in: Proceedings of AMTA, 2020, pp. 116–122.
+
 <h3 id="preprocess_tool">数据预处理</h3>
 
 <h3 id="eval_analysis_tool">分析和评测</h3>
+
+Ondřej Klejch, etc. MT-ComparEval: Graphical evaluation interface for Machine Translation development. The Prague Bulletin of Mathematical Linguistics, NUMBER 104 OCTOBER 2015 63–74
+
+G. Neubig, Z.-Y. Dou, J. Hu, P. Michel, D. Pruthi, X. Wang, comparemt: A tool for holistic comparison of language generation systems, in: Proceedings of NAACL-HLT (Demonstrations), 2019, pp. 35–41.
 
 <h2 id="refence">(八) 参考文献</h2>
 
