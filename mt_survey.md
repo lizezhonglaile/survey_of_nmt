@@ -15,7 +15,7 @@
         * [基于RNN的序列到序列模型](#rnn_seq2seq)  
         * [注意力机制](#attention)
         * [transformer模型](#transformer)
-        * [其他序列到序列模型](#other_seq2seq)
+        * [其他encoder-decoder模型](#other_seq2seq)
     * [翻译模型训练](#learning_nmt)
     * [翻译解码](#decoding_nmt)
     * [多语言](#multilingual_nmt)
@@ -78,7 +78,7 @@
 <h3 id="problem_value">解决意义</h3>
 
 <h2 id="methods_machine_translation">(二) 主要技术范式</h2>
-
+从学术上讲，似乎一切混合模型都是在灌水；但从工业界上讲，所有单模型都是纸上谈兵。
 <h3 id="rmt">基于规则的方法</h3>
 
 <h3 id="ebmt">基于实例的方法</h3>
@@ -120,11 +120,12 @@
 <div align="center">注意力模型</div>
 
 <h4 id="transformer">transformer模型</h3>
+变形金刚
 
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/transformer.jpg" width="75%" height="75%"></div>
 <div align="center">transformer模型</div>
 
-<h4 id="other_seq2seq">其他序列到序列模型</h4>
+<h4 id="other_seq2seq">其他encoder-decoder模型</h4>
 CNN
 GCN
 Graph Transformer
