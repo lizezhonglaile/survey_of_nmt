@@ -108,6 +108,8 @@
 <h4 id="monolingual_word_representation">单语言词嵌入</h4>
 
 <h4 id="cross_word_representation">跨语言词嵌入</h4>
+
+M. Artetxe, G. Labaka, E. Agirre, Learning bilingual word embeddings with (almost) no bilingual data, in: Proceedings of ACL, 2017, pp. 451–462.
     
 <h3 id="encoder-decoder">翻译建模：encoder-decoder框架</h3>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png" width="55%" height="55%"></div>
@@ -255,7 +257,6 @@ arXiv:2002.06823 (2020).
 词性多特征嵌入
 词对齐
 
-
 R. Sennrich, B. Haddow, Linguistic input features improve neural machine translation, in: Proceedings of WMT, 2016, pp. 83–91.
 
 <h4 id="phrase_knowledge_merge">短语知识</h4>
@@ -264,14 +265,18 @@ R. Sennrich, B. Haddow, Linguistic input features improve neural machine transla
 
 
 <h4 id="syntax_merge">句法知识</h4>
+
 源端句法知识
-目标端句法知识
 
 A. Eriguchi, K. Hashimoto, Y. Tsuruoka, Tree-to-sequence attentional neural machine translation, in: Proceedings of ACL, 2016, pp. 823–833.
 
 J. Hao, X.Wang, S. Shi, J. Zhang, Z. Tu, Multi-granularity self-attention for neural machine translation, in: Proceedings of EMNLP-IJCNLP, 2019, pp. 886–896.
 
 E. Bugliarello, N. Okazaki, Enhancing machine translation with dependency-aware self-attention, in: Proceedings of ACL, 2020, pp. 1618–1627.
+
+J. Bastings, I. Titov, W. Aziz, D. Marcheggiani, K. Sima’an, Graph convolutional encoders for syntax-aware neural machine translation, in: Proceedings of EMNLP, 2017, pp. 1957–1967.
+
+目标端句法知识
 
 A. Eriguchi, Y. Tsuruoka, K. Cho, Learning to parse and translate improves neural machine translation, in: Proceedings of ACL, 2017, pp. 72–78.
 
@@ -282,8 +287,6 @@ X. Wang, H. Pham, P. Yin, G. Neubig, A tree-based decoder for neural machine tra
 S. Wu, D. Zhang, N. Yang, M. Li, M. Zhou, Sequence-to-dependency neural machine translation, in: Proceedings of ACL, 2017, pp. 698–707.
 
 R. Aharoni, Y. Goldberg, Towards string-to-tree neural machine translation, in: Proceedings of ACL, 2017, pp. 132–140.
-
-J. Bastings, I. Titov, W. Aziz, D. Marcheggiani, K. Sima’an, Graph convolutional encoders for syntax-aware neural machine translation, in: Proceedings of EMNLP, 2017, pp. 1957–1967.
 
 J. Yang, S. Ma, D. Zhang, Z. Li, M. Zhou, Improving neural machine translation with soft template prediction, in: Proceedings of WMT, 2020, pp. 5979–5989.
 
