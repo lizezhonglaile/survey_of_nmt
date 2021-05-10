@@ -7,7 +7,7 @@
     * [基于实例的方法](#ebmt)
     * [基于统计的方法](#statistical_machine_translation)
     * [基于深度学习的方法](#neural_machine_translation)
-* [(三) 神经机器翻译基础：概念和模型](https://github.com/lizezhonglaile/survey_of_nmt/edit/main/chapter-3-basic.md)
+* [(三) 神经机器翻译基础：概念和模型](https://github.com/lizezhonglaile/survey_of_nmt/blob/main/chapter-3-basic.md)
     * [词嵌入](#word_representation)
         * [单语言词嵌入](#monolingual_word_representation)
         * [跨语言词嵌入](#cross_word_representation)
