@@ -21,7 +21,7 @@
     * [多语言](#multilingual_nmt)
     * [多模态](#multimodal_nmt)
 * [(四) 神经机器翻译前沿：问题和现状](#challenges)
-    * [开放词表](#oov)
+    * [受限词表](#oov)
         * [子词模型](#subword_nmt)
         * [字符模型](#char_nmt)
         * [混合模型](#hybrid_nmt)
@@ -162,7 +162,7 @@ beam search
 
 <h2 id="challenges">(四) 神经机器翻译前沿：挑战和现状</h2>
 
-<h3 id="oov">开放词表</h3>
+<h3 id="oov">受限词表</h3>
 
 <h4 id="subword_nmt">子词模型</h4>
 
