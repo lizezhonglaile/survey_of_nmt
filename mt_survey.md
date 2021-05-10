@@ -16,8 +16,8 @@
         * [注意力机制](#attention)
         * [transformer模型](#transformer)
         * [其他序列到序列模型](#other_seq2seq)
+    * [翻译模型训练](#learning_nmt)
     * [翻译解码](#decoding_nmt)
-    * [翻译模型学习](#learning_nmt)
     * [多语言](#multilingual_nmt)
     * [多模态](#multimodal_nmt)
 * [(四) 神经机器翻译前沿：问题和现状](#challenges)
@@ -102,7 +102,7 @@
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/smt_vs_nmt.png" width="50%" height="50%"></div>
 
 <h2 id="neural_machine_translation">(三) 神经机器翻译基础：概念和模型</h2>
-
+本章围绕机器翻译三个最核心问题展开，即翻译建模，模型训练和解码。在此之前，有必要先介绍一下词表示学习，它是整个基于深度学习的自然语言处理基础，也是神经网络机器翻的基础。然后围绕核心问题，介绍翻译模型的几个里程碑意义的进展，模型训练的目标函数选择以及基于 Beam search 的翻译解码算法。最后，对于近几年比较新的多语言，多模态也进行一个简单的介绍。
 <h3 id="word_representation">词表示学习</h3>
 
 <h4 id="monolingual_word_representation">单语言词表示</h4>
@@ -129,12 +129,12 @@ CNN
 GCN
 Graph Transformer
 
-<h3 id="decoding_nmt">翻译解码</h3>
-beam search
-
 <h3 id="learning_nmt">翻译模型学习</h3>
 损失函数
 其他学习范式，无监督，半监督
+
+<h3 id="decoding_nmt">翻译解码</h3>
+beam search
 
 <h3 id="multilingual_nmt">多语言</h3>
 多语言机器翻译，区别于通常一种语言到另外一种语言的一对一翻译，能够采用一个模型完成多种语言之间翻译。基于神经网络的多语言机器翻译源于序列到序列学习和多任务学习，从类型上可以分为单语到多语翻译、多语到单语翻译，以及多语到多语翻译。
