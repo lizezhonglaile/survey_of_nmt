@@ -12,10 +12,10 @@
         * [单语言词表示](#monolingual_word_representation)
         * [跨语言词表示](#cross_word_representation)
     * [翻译建模：encoder-decoder框架](#encoder-decoder)
-        * [基于RNN的序列模型](#rnn_seq2seq)
-        * [基于CNN的序列模型](#cnn_seq2seq)
+        * [基于RNN的序列到序列模型](#rnn_seq2seq)  
         * [注意力机制](#attention)
         * [transformer模型](#transformer)
+        * [其他的序列到序列模型](#other_seq2seq)
     * [翻译解码](#decoding_nmt)
     * [翻译模型学习](#learning_nmt)
     * [多语言](#multilingual_nmt)
@@ -113,9 +113,7 @@
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/seq2seq.png" width="55%" height="55%"></div>
 <div align="center">seq2seq模型</div>
 
-<h4 id="rnn_seq2seq">基于RNN的序列模型</h4>
-
-<h4 id="cnn_seq2seq">基于CNN的序列模型</h4>
+<h4 id="rnn_seq2seq">基于RNN的序列到序列模型</h4>
 
 <h4 id="attention">注意力机制</h3>
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/attention.png" width="55%" height="55%"></div>
@@ -126,8 +124,13 @@
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/transformer.jpg" width="75%" height="75%"></div>
 <div align="center">transformer模型</div>
 
+<h4 id="other_seq2seq">其他的序列到序列模型</h4>
+CNN
+GCN
+Graph Transformer
 
 <h3 id="decoding_nmt">翻译解码</h3>
+beam search
 
 <h3 id="learning_nmt">翻译模型学习</h3>
 损失函数
@@ -200,7 +203,7 @@
 
 <h4 id="data_argument">数据增强</h4>
 
-<h4 id="monolingual_exploit">
+<h4 id="monolingual_exploit">单语语料利用</h4>
 
 单语语料是一种非常重要的资源，具有数量大、获取方便的优势。在统计机器翻译中，大规模目标语言单语语料可以提供优质的语言模型，对提高翻译流利度起着很重要作用。在神经机器翻译中可以利用的单语语料主要分为目标语言单语语料和源语言单语语料。
 
