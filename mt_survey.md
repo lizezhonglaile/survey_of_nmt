@@ -1,4 +1,4 @@
-# 神经机器翻译技术调研
+# 神经机器翻译技术综述
 * [(一) 前言](#history)
     * [问题起源](#problem_definition)
     * [解决意义](#problem_value)
@@ -15,7 +15,7 @@
         * [基于RNN的序列到序列模型](#rnn_seq2seq)  
         * [注意力机制](#attention)
         * [transformer模型](#transformer)
-        * [其他的序列到序列模型](#other_seq2seq)
+        * [其他序列到序列模型](#other_seq2seq)
     * [翻译解码](#decoding_nmt)
     * [翻译模型学习](#learning_nmt)
     * [多语言](#multilingual_nmt)
@@ -124,7 +124,7 @@
 <div align="center"><img src="https://github.com/lizezhonglaile/mt_tutorial/blob/main/pic/transformer.jpg" width="75%" height="75%"></div>
 <div align="center">transformer模型</div>
 
-<h4 id="other_seq2seq">其他的序列到序列模型</h4>
+<h4 id="other_seq2seq">其他序列到序列模型</h4>
 CNN
 GCN
 Graph Transformer
